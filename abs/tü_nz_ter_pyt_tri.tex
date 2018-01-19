@@ -1,0 +1,250 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{eurosym} 
+\usepackage{multicol} 
+
+\usepackage{tkz-euclide}
+\usepackage{wasysym}
+\usepackage {graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}  % \align-Umgebung
+\usetkzobj{all}
+
+
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=0.5cm]{geometry} 
+\usepackage{fancyheadings} 
+\pagestyle{fancy} 
+\headheight1.6cm 
+\lhead{} 
+\chead{} 
+\rhead{\includegraphics[scale=0.5]{logo.png}} 
+\lfoot{} 
+\cfoot{} 
+\rfoot{} 
+\usepackage{amsmath}  
+\usepackage{cancel} 
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\newtheoremstyle{aufg} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{aufg} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\newtheoremstyle{bsp} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\em}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{bsp} 
+\newtheorem{beispiel}{Beispiel} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$2-10=$
+\item 
+$3-8=$
+\item 
+$5-4=$
+\item 
+$-5+6=$
+\item 
+$-8+8=$
+\item 
+$-8+10=$
+\item 
+$-10-1=$
+\item 
+$-8-1=$
+\item 
+$-4-4=$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$(-1)-1=$
+\item 
+$9+(+8)=$
+\item 
+$10+(-8)=$
+\item 
+$5-(-5)=$
+\item 
+$-(7)+(-9)=$
+\item 
+$-(-1)-(+10)=$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$5-7a-3a=$
+\item 
+$-7a+5-3a=$
+\item 
+$5-7a-3=$
+\item 
+$2-3a-8a=$
+\item 
+$-3a+2-8a=$
+\item 
+$2-3a-8=$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$2-(-10a)+(-2a)=$
+\item 
+$(-10a)-(+2)-(-2a)=$
+\item 
+$(-2)+(+10a)-(-2)=$
+\item 
+$2-(-10a)+(-2a)=$
+\item 
+$(-10a)-(+2)-(-2a)=$
+\item 
+$(-2)+(+10a)-(-2)=$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+
+\begin{aufgabe}
+
+Bestimme die fehlenden Gr\"o\ss{}en.
+
+\begin  {minipage}[t]{9cm}
+\begin{tikzpicture}[rotate=180]
+\coordinate (O) at (0,0);
+\coordinate (A) at (4,0);
+\coordinate (B) at (0,2);
+\draw (O)--(A) node[midway,sloped, above]{a};
+\draw (A)--(B) node[rotate=0,midway,sloped, below]{7cm};
+\draw (B)--(O) node[rotate=180,midway,sloped, below]{3cm};
+\tkzMarkAngle[ size=0.65cm](A,O,B)
+\tkzLabelAngle[pos = 0.35](A,O,B){$\cdot$}
+\tkzMarkAngle[ size=1.4cm](B,A,O)
+\tkzLabelAngle[pos = 1](B,A,O){$\alpha$}
+\tkzMarkAngle[ size=0.65cm](O,B,A)
+\tkzLabelAngle[pos = 0.35](O,B,A){$\beta$}
+\end{tikzpicture}
+\end{minipage}
+\begin  {minipage}[t]{5cm}
+\begin{tikzpicture}[rotate=30]
+\coordinate (O) at (0,0);
+\coordinate (A) at (4,0);
+\coordinate (B) at (0,2);
+\draw (O)--(A) node[rotate=30,midway,sloped, below]{y};
+\draw (A)--(B) node[rotate=30,midway,sloped, above]{x};
+\draw (B)--(O) node[rotate=30,midway,sloped, below]{5cm};
+\tkzMarkAngle[ size=0.65cm](A,O,B)
+\tkzLabelAngle[pos = 0.35](A,O,B){$\cdot$}
+\tkzMarkAngle[ size=0.65cm](O,B,A)
+\tkzLabelAngle[pos = 0.35](O,B,A){$\beta$}
+\tkzMarkAngle[ size=1.4cm](B,A,O)
+\tkzLabelAngle[pos = 1](B,A,O){$33^\circ$}
+\end{tikzpicture}
+\end{minipage}
+
+\begin  {minipage}[t]{9cm}
+a) \framebox{\qquad/6} 
+\end{minipage}
+\begin  {minipage}[t]{5cm}
+b) \framebox{\qquad/7} 
+\end{minipage}
+
+
+\vspace{1cm}
+%Dreieck 5> Tan  berechnen
+
+\begin  {minipage}[t]{9cm}
+\begin{tikzpicture}[rotate=220]
+\coordinate (O) at (0,0);
+\coordinate (A) at (4,0);
+\coordinate (B) at (0,2);
+\draw (O)--(A) node[rotate=40,midway,sloped, above]{3cm};
+\draw (A)--(B) node[rotate=220,midway,sloped, above]{x};
+\draw (B)--(O) node[rotate=220,midway,sloped, above]{5cm};
+
+\tkzMarkAngle[ size=0.65cm](A,O,B)
+\tkzLabelAngle[pos = 0.35](A,O,B){$\cdot$}
+
+\tkzMarkAngle[ size=1.4cm](B,A,O)
+\tkzLabelAngle[pos = 1.1](B,A,O){$60^\circ$}
+
+\tkzMarkAngle[ size=0.8cm](O,B,A)
+\tkzLabelAngle[pos = 0.5](O,B,A){$\beta$}
+
+\end{tikzpicture}
+\end{minipage}
+%Dreieck 6> beliebig  berechnen
+\begin  {minipage}[t]{5cm}
+\begin{tikzpicture}[rotate=30]
+\coordinate (O) at (0,0);
+\coordinate (A) at (4,0);
+\coordinate (B) at (0,2);
+\draw (O)--(A) node[rotate=30,midway,sloped, below]{3cm};
+\draw (A)--(B) node[rotate=30,midway,sloped, above]{5cm};
+\draw (B)--(O) node[rotate=30,midway,sloped, below]{4cm};
+
+\tkzMarkAngle[ size=0.65cm](A,O,B)
+\tkzLabelAngle[pos = 0.35](A,O,B){$\cdot$}
+
+\tkzMarkAngle[ size=0.8cm](O,B,A)
+\tkzLabelAngle[pos = 0.5](O,B,A){$\alpha$}
+
+\tkzMarkAngle[ size=1.4cm](B,A,O)
+\tkzLabelAngle[pos = 1](B,A,O){$\beta$}
+
+
+\end{tikzpicture}
+\end{minipage}
+
+\begin  {minipage}[t]{9cm}
+c) \framebox{\qquad/4} \\
+\end{minipage}
+\begin  {minipage}[t]{5cm}
+d) \framebox{\qquad/3} \\
+\end{minipage}
+
+
+
+\end{aufgabe}
+
+
+
+
+
+
+\end{flushleft} 
+\end{document}

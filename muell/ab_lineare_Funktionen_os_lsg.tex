@@ -1,0 +1,141 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{eurosym} 
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=0.5cm]{geometry} 
+\usepackage{fancyheadings} 
+\pagestyle{fancy} 
+\headheight1.6cm 
+\lhead{Lineare Funktionen} 
+\chead{MA-1} 
+\rhead{\includegraphics[scale=0.5]{logo.png}} 
+\lfoot{} 
+    \cfoot{} 
+    \rfoot{} 
+\usepackage{amsmath}  
+\usepackage{cancel} 
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\newtheoremstyle{aufg} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{aufg} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\newtheoremstyle{bsp} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\em}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{bsp} 
+\newtheorem{beispiel}{Beispiel} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{center}Lineare Funktionen\end{center} 
+ 04.09.15 \\[2em]Gegeben ist die Funktion f mit\[f(x)=- 4 x - 1\; . \]\begin{enumerate}[a)] 
+\item 
+Bestimmen Sie die Nullstellen von $f$. \\ 
+{\bf Nullstellen:} 
+\begin{align*} 
+f(x)&=0 \\ 
+- 4 x - 1&=0 \\ 
+\text{Mit CAS:} \\ 
+x&=- \frac{1}{4}\end{align*} 
+$\Rightarrow$ Nullstelle bei $N(- \frac{1}{4}|0)$ \\ 
+
+\item 
+Zeichnen Sie den Graphen von $f$. \\ 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm] 
+\draw [color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.33,-3.57) grid (3.29,3.53); 
+\draw[->,color=black] (-3.33,0) -- (3.29,0); 
+\foreach \x in {-3,-2,-1,1,2,3} 
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; 
+\draw[color=black] (3,0.07) node [anchor=south west] { x}; 
+\draw[->,color=black] (0,-3.57) -- (0,3.53); 
+\foreach \y in {-3,-2,-1,1,2,3} 
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0.09,3.17) node [anchor=west] { y}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\clip(-3.33,-3.57) rectangle (3.29,3.53);\draw [domain=-3.33:3.29] plot(\x,{(-4*\x+-1}); 
+\end{tikzpicture} 
+\hspace{1cm}
+\item 
+Bestimmen Sie den Funktionswert an der Stelle $x=1$. \\ 
+{\bf Funktionswert:} \\ 
+$f(1)=-5$\qquad (mit CAS)
+\item 
+Bestimmen Sie, an welcher Stelle die Funktion den Wert $y=-2$ annimmt. \\ 
+{\bf Funktionsstelle:} 
+\begin{align*} 
+f(x)&=-2\\ 
+- 4 x - 1&=0 \\ 
+\text{Mit CAS:} \\ 
+x&=\frac{1}{4} 
+\end{align*} 
+\clearpage
+\item 
+Untersuchen Sie die Steigung von $f$ sowohl qualitativ (fallend/steigend) als auch quantitativ. Geben Sie hierzu auch die Steigung in Prozent und den Steigungswinkel an. \\ 
+{\bf Steigung} (in Prozent):\quad $m=-4=-400.0\%$ \\ 
+{\bf Steigungswinkel:} \\ 
+\begin{align*} 
+\tan(\alpha) &=-4\\ 
+\text{mit CAS:} \\ 
+\alpha &=-76.0^{\circ} 
+\end{align*} 
+
+\item 
+Gegeben ist eine weitere Funktion $g$, deren Graph durch die Punkte $A(5|-6)$ und $B(-5|4)$ verl\"auft. Bestimmen Sie die Funktionsgleichung von $g$. \\ 
+{\bf Geradengleichung aufstellen:} \quad $y=mx+c$ (*) \\ 
+{\bf Steigung bestimmen:} \\ 
+$m=\frac{(4)-(-6)}{(-5)-(5)}=-1$ \\ 
+$y$-Wert, $x$-Wert und $m$ in (*) einsetzen: 
+\begin{align*} 
+-6&=-1\cdot5+ c \\ 
+-1&= c 
+\end{align*} \\ 
+{\bf Funktionsgleichung:} 
+\[g(x)=- x - 1\]
+\item 
+Untersuchen Sie, ob sich $f$ und $g$ schneiden und bestimmen Sie gegebenenfalls den Schnittpunkt. \\ 
+{\bf Schnittpunkt:} 
+\begin{align*} 
+f(x)&=g(x) \\ 
+- 4 x - 1&=- x - 1 \\ 
+\text{mit CAS:} \\ 
+x&=0\end{align*} 
+$\Rightarrow$ Schnittpunkt bei $N(0|-1)$ \\ 
+
+\item 
+Bestimmen Sie den Schnittwinkel zwischen $f$ und $g$. \\ 
+{\bf Schnittwinkel:} \\ 
+\begin{align*} 
+\tan(\alpha) &=\left|\frac{m_1-m_2}{1+m_1\cdot m_2}\right| \\ 
+\tan(\alpha) &=\left|\frac{(-4)-(-1)}{1+(-4)(-1)}\right| \\ 
+\text{mit CAS:} \\ 
+\alpha &=31.0^{\circ} 
+\end{align*} 
+
+\end{enumerate} 
+\end{flushleft} 
+\end{document}
