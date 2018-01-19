@@ -1,0 +1,6 @@
+\begin{enumerate}[a)]
+\item Berechne das Volumen des abgebildeten K\"orpers.
+\item Gib die Masse des K\"orpers in Kilogramm an. Er besteht aus Holz mit der Dichte #[rho]#.
+\end{enumerate}
+\includegraphics{bilder/zylinderkegel.png}
+KrKo # Zusammengesetzt # 0 # 5

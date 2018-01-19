@@ -1,0 +1,1 @@
+aufg_winkel_vektoren(art=Z,runden=2,intervall=[-10,10],aufgabentext="Bestimmen Sie den Winkel zwischen den beiden folgenden Vektoren.")

@@ -1,0 +1,156 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{eurosym} 
+\usepackage{multicol} 
+\usepackage{framed}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=0.5cm]{geometry} 
+\usepackage{fancyheadings} 
+\pagestyle{fancy} 
+\headheight1.6cm 
+\lhead{Name:} 
+\chead{\hspace{5cm} Klasse: \qquad\qquad Datum: \qquad\qquad} 
+\rhead{\includegraphics[scale=0.3]{logo.png}} 
+\lfoot{} 
+\cfoot{} 
+\rfoot{} 
+\usepackage{amsmath}  
+\usepackage{cancel} 
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\newtheoremstyle{aufg} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{aufg} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\newtheoremstyle{bsp} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\em}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{bsp} 
+\newtheorem{beispiel}{Beispiel} 
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{center}{Schriftliche Arbeit zum Erwerb eines Zertifikats im Fach Mathematik}\end{center} 
+\begin{center}{\Large Parabeln und Potenzen}\end{center} 
+\renewcommand{\arraystretch}{2.15} 
+\begin{tabular}{|p{10cm}|p{2cm}|p{2cm}|p{2cm}|} 
+\hline 
+\hspace{2cm} Punkte von \qquad32\qquad Punkten erreicht & \hspace{1.2cm} NP & G & E \\ 
+\hline 
+\end{tabular} \\[1em]    
+{\bf Hilfsmittel: }nicht programmierf\"ahiger Taschenrechner, Formelsammlung\\ 
+{\bf Zeit: }45 Minuten\\ 
+\begin{center} {\bf Bearbeite so viele Aufgaben wie m\"oglich.} \end{center}\begin{center} \begin{framed} Grundniveau (9 Punkte) \end{framed} \end{center}\begin{aufgabe}\framebox{\qquad/6} ~ \\ 
+Gib f\"ur die folgenden Parabeln den Scheitelpunkt, die Symmetrieachse, sowie die Nullstellen an. 
+\begin{minipage}{0.25\textwidth} 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3,scale=0.7][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{(x - 1)**2 + 1}; 
+\draw (1.5,1.2) node[right] {$\scriptscriptstyle f_1$}; 
+\draw[color=black] plot[smooth] function{(x + 1)**2 + 2}; 
+\draw (-0.5,2.2) node[right] {$\scriptscriptstyle f_2$}; 
+\end{scope} 
+\end{tikzpicture}\end{minipage} 
+\begin{minipage}{0.1\textwidth} 
+ ~ \end{minipage} 
+\begin{minipage}{0.55\textwidth} 
+\renewcommand{\arraystretch}{1.3} 
+\begin{tabular}{c|c|c|c}
+ & Scheitelpunkt & Symmetrieachse & Nullstellen\\ \hline 
+$f_1$ & $S(1|1)$ & $x=1$ & Keine Nullstelle\\ \hline 
+$f_2$ & $S(-1|2)$ & $x=-1$ & Keine Nullstelle\\ 
+
+\end{tabular} 
+
+\end{minipage} 
+
+\end{aufgabe} 
+\begin{aufgabe}\framebox{\qquad/3} ~ \\ 
+Berechne ohne Taschenrechner. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$0\cdot10^{4}=0$
+\item 
+$-4\cdot10^{-5}=-4e-05$
+\item 
+$-10\cdot10^{1}=-100$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+
+ \clearpage 
+\begin{center} \begin{framed} Standardniveau (19 Punkte) \end{framed} \end{center}\begin{aufgabe}\framebox{\qquad/7} ~ \\ 
+Erstelle f\"ur die Funktion $f(x)=x^{2} + x - 1$ eine Wertetabelle und zeichne den dazugeh\"origen Graphen im Bereich von $x=-3$ bis $x=3$ in ein Koordinatensystem. \\ 
+\renewcommand{\arraystretch}{1.0} 
+\begin{tabular}{c|c|c|c|c|c|c}
+-3 & -2 & -1 & 0 & 1 & 2 & 3\\ \hline 
+5.0 & 1.0 & -1.0 & -1.0 & 1.0 & 5.0 & 11.\\ 
+
+\end{tabular} 
+
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3,scale=1][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{x**2 + x - 1}; 
+\draw (-0.5,-1.8) node[right] {$\scriptscriptstyle f$}; 
+\end{scope} 
+\end{tikzpicture}\end{aufgabe} 
+\begin{aufgabe}\framebox{\qquad/4} ~ \\ 
+Klaus hat sich einen neuen MP3-Player gekauft. Der MP3-Player besitzt eine Speicherkapazit\"at von $6\mathrm{\,GB}$. Wieviele Titel kann er auf den Player laden, wenn ein Musikst\"uck im Schnitt $2\mathrm{\,MB}$ belegt? 
+$\frac{6.0\mathrm{\,GB}}{2.0\mathrm{\,MB}} = \frac{6.0\cdot 10^9\mathrm{\,B}}{2.0\cdot 10^6\mathrm{\,B}}=3000.0\mathrm{\,}$\end{aufgabe} 
+\begin{aufgabe}\framebox{\qquad/4} ~ \\ 
+Bei einem Frachterungl\"uck sind $200000\mathrm{\,l}$ \"Ol ins Meer gelaufen. Die Dicke der \"Olschicht betr\"agt $0.01\mathrm{\,mm}$. Berechne die Wasserfl\"ache, die von \"Ol bedeckt ist.
+$\frac{200000.0\mathrm{\,l}}{0.01\mathrm{\,mm}} = \frac{200000.0\cdot 10^{-3}\mathrm{\,m}}{0.01\cdot 10^-3\mathrm{\,m}}=20000000.0\mathrm{\,m}^2$\end{aufgabe} 
+\begin{aufgabe}\framebox{\qquad/4} ~ \\ 
+Welche Seitenl\"ange hat ein $20\mathrm{\,ha}$ gro\ss{}er quadratischer Acker?
+$\sqrt{20.0\mathrm{\,ha}}=\sqrt{20.0\cdot 10^4\mathrm{\,m}^2}=447.213595499958\mathrm{\,m}$\end{aufgabe} 
+\begin{center} \begin{framed} Erh\"ohtes Niveau (4 Punkte) \end{framed} \end{center}\begin{aufgabe}\framebox{\qquad/4} ~ \\ 
+Bringe die Funktionsgleichungen auf Scheitelpunktform. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$f(x)=x^{2} - 4 x + 3$ \\ 
+$f(x)=\left(x - 2\right)^{2} - 1$ \\ 
+
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\end{flushleft} 
+    \end{document}

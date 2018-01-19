@@ -1,0 +1,54 @@
+<!--
+<form action="quad_glg">
+    <input type="submit" value="Quadratische Gleichungen">
+</form>
+-->
+
+<form target="_blank" action="lin_glg">
+    <input type="submit" value="Lineare Gleichungen">
+</form>
+
+
+<form target="_blank" action="lin_func">
+    <input type="submit" value="Lineare Funktionen">
+</form>
+
+
+<form target="_blank" action="terme">
+    <input type="submit" value="Terme">
+</form>
+
+<form target="_blank" action="normalparabel">
+    <input type="submit" value="Normalparabeln">
+</form>
+
+<form target="_blank" action="parabel">
+    <input type="submit" value="Parabeln">
+</form>
+
+<!--
+<form action="scheitelpunktform">
+    <input type="submit" value="Scheitelpunktform">
+</form>
+-->
+
+<form target="_blank" action="prozentrechnung">
+    <input type="submit" value="Prozentrechnung">
+</form>
+
+<form target="_blank" action="linFunc_os">
+    <input type="submit" value="Lineare Funktionen (Oberstufe)">
+</form>
+
+
+<!--
+<form action="zertifikat_parabeln_potenzen">
+    <input type="submit" value="Parabeln und Potenzen">
+</form>
+
+
+<form action="pdf_view" target="_blank">
+    <input type="submit" value="Test">
+</form>
+-->
+

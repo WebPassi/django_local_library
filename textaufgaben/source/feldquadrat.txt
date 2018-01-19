@@ -1,0 +1,3 @@
+Welche Seitenl\"ange hat ein #[Wurzel]# gro\ss{}er quadratischer Acker?
+PaPo # Wurzel # 0 # 4 
+

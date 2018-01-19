@@ -1,0 +1,1 @@
+Bei einem Laplace-Zufallsversuch sind alle Ergebnisse gleichwahrscheinlich. (alle Ergebnisse + gleichwahrscheinlich + Ausdruck = 3 Punkte) 

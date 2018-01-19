@@ -1,0 +1,2 @@
+Der Mittelkreis auf dem Fu\ss{}ballfeld hat einen Umfang von #[u]#. Berechne seinen Radius und Fl\"acheninhalt.
+KrKo # Kreisradius # 0 # 5

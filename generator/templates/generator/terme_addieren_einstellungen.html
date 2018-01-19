@@ -1,0 +1,38 @@
+<form action="{% url 'generator:aufgabe_terme_addieren' %}" target="_top" method="post">
+  {% csrf_token %}
+
+
+  <textarea rows="4" cols="50" name="aufgabentext">Fasse so weit wie möglich zusammen.</textarea>
+  <br>
+
+  <br>
+  <label name="anzahl">Menge:
+    <input type="text" name="anzahl" value="3">
+  </label>
+
+  <label name="variablen">Variablen
+    <input type="text" name="variablen" value="x">
+  </label>
+
+  <br>
+  <label name="og">Obere Grenze:
+    <input type="text" name="og" value="5">
+  </label>
+
+  <br>
+  <label name="laenge">Termlänge:
+    <input type="text" name="laenge" value="2">
+  </label>
+
+
+  <br>
+  <label name="spalten">Spalten:
+    <input type="text" name="spalten" value="3">
+  </label>
+
+  
+  <br>
+  <input type="submit" value="Erstellen">
+
+</form>
+

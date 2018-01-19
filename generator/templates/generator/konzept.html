@@ -1,0 +1,66 @@
+<form action="{% url 'generator:output_direkt' ab  %}" target="output" method="post">
+  {% csrf_token %}
+  <input type="submit" name="egal" value="AB">
+</form>
+<form action="{% url 'generator:output_direkt' lsg  %}" target="output" method="post">
+  {% csrf_token %}
+  <input type="submit" name="egal" value="Lsg">
+</form>
+
+<hr>
+
+<hr>
+{% for a in aufgaben %}
+<b>A{{ forloop.counter }}</b>
+
+<form action="{% url 'generator:uebersicht_aufgaben' forloop.counter %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Andere Aufgabe">
+</form>
+
+<form action="{% url 'generator:aufgabe_neu_berechnen' forloop.counter %}" target="_top" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Neu berechnen">
+</form>
+
+<hr>
+{% endfor %}
+
+
+<hr>
+
+
+<form action="{% url 'generator:aufgabe_loeschen' %}" target="_top" method="post">
+  {% csrf_token %}
+  <input type="submit" name="auf" value="Letzte Aufgabe löschen">
+</form>
+
+
+<form action="{% url 'generator:uebersicht_aufgaben' %}" method="post">
+  {% csrf_token %}
+  <input type="submit" name="auf" value="Neue Aufgabe">
+</form>
+
+<hr>
+<hr>
+
+<form action="{% url 'generator:projekt_speichern' %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Projekt speichern">
+</form>
+
+<form action="{% url 'generator:neues_projekt' %}" target="_top" method="post">
+{% csrf_token %}
+<input type="submit" value="Neues Projekt">
+</form>
+
+<form action="{% url 'generator:projekt_laden' %}" method="post">
+{% csrf_token %}
+    <input type="submit" value="Projekt laden">
+</form>
+
+<form action="{% url 'generator:index' %}" method="post">
+{% csrf_token %}
+    <input type="submit" value="Startseite">
+</form>
+

@@ -1,0 +1,1 @@
+aufg_ebene_3Punktform(art=Z,runden=2,intervall=[-10,10],aufgabentext="Geben Sie die Ebene $E$ in Paramterform an, welche die folgenden Punkte enthält.")

@@ -1,0 +1,5 @@
+<form action="{% url 'generator:projekt_speichern' %}" target="_top" method="post">
+{% csrf_token %}
+<input type="text" name="projektname" value="">
+<input type="submit" value="Speichern">
+</form>

@@ -1,0 +1,161 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{eurosym} 
+\usepackage{multicol} 
+\usepackage{framed}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=0.5cm]{geometry} 
+\usepackage{fancyheadings} 
+\pagestyle{fancy} 
+\headheight1.6cm 
+\lhead{Name:} 
+\chead{\hspace{5cm} Klasse: \qquad\qquad Datum: \qquad\qquad} 
+\rhead{\includegraphics[scale=0.3]{/home/pfranz/hbo/logo.png}} 
+\lfoot{} 
+\cfoot{} 
+\rfoot{} 
+\usepackage{amsmath}  
+\usepackage{cancel} 
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\newtheoremstyle{aufg} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{aufg} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\newtheoremstyle{bsp} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\em}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{bsp} 
+\newtheorem{beispiel}{Beispiel} 
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{center}AB 5 - Potenzen\end{center}\begin{aufgabe} ~ \\ 
+Schreibe ohne Potenz als Multiplikationsaufgabe. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$5^{7}=$$5\cdot5\cdot5\cdot5\cdot5\cdot5\cdot5$
+\item 
+$6^{2}=$$6\cdot6$
+\item 
+$3^{5}=$$3\cdot3\cdot3\cdot3\cdot3$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Schreibe als Potenz. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$2\cdot2\cdot2\cdot2=$$2^{4}$
+\item 
+$7\cdot7=$$7^{2}$
+\item 
+$5\cdot5\cdot5\cdot5=$$5^{4}$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Schreibe als Bruch. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$6^{-3}=$$\frac{1}{6^{3}}$
+\item 
+$4^{-8}=$$\frac{1}{4^{8}}$
+\item 
+$9^{-4}=$$\frac{1}{9^{4}}$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Schreibe als Wurzel. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$5^{\frac{8}{11}}=$$\sqrt[11]{5}^{\,8}$
+\item 
+$4^{\frac{7}{3}}=$$\sqrt[3]{4}^{\,7}$
+\item 
+$3^{\frac{8}{7}}=$$\sqrt[7]{3}^{\,8}$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Schreibe als Potenz. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$\sqrt[14]{7}^{\,11}=$$7^{\frac{11}{14}}$
+\item 
+$\sqrt[2]{2}^{\,7}=$$2^{\frac{7}{2}}$
+\item 
+$\sqrt[5]{5}^{\,14}=$$5^{\frac{14}{5}}$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Schreibe als eine Potenz. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$3^{-5}\cdot3^{0}=$$3^{-5}$
+\item 
+$9^{8}\cdot9^{2}=$$9^{10}$
+\item 
+$6^{-4}\cdot6^{-4}=$$6^{-8}$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Schreibe als eine Potenz. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$\frac{2^{-10}}{2^{-8}}=$$2^{-2}$
+\item 
+$\frac{2^{-5}}{2^{-5}}=$$2^{0}$
+\item 
+$\frac{6^{7}}{6^{4}}=$$6^{3}$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Berechne mit dem Taschenrechner. \\ 
+\begin{multicols}{2} 
+\begin{enumerate}[a)] 
+\item 
+$1\cdot5^{5}+6\cdot8^{-2}=$$3125.09375$
+\item 
+$-5\cdot3^{-1}+4\cdot4^{2}=$$62.3333333333$
+\item 
+$-4\cdot7^{5}+10\cdot6^{-2}=$$-67227.7222222$
+\item 
+$-6\cdot6^{-2}+1\cdot8^{-1}=$$-0.0416666666667$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\end{flushleft} 
+\end{document}

@@ -1,0 +1,53 @@
+<form action="{% url 'generator:aufgabenwahl' %}" method="post">
+{% csrf_token %}
+  <select name="aufgabenbereich" size="20">
+
+    <optgroup label="Zahlen und Terme">
+      <option value="ordnen">Zahlen ordnen</option>
+      <option value="terme_addieren">3a+2,4b-1,9a</option>
+      <option value="terme_eine_klammer">3(2x+3)</option>
+      <option value="terme_zwei_klammern">3(2x+3)-4(x-2)</option>
+    </optgroup>
+
+    <optgroup label="Gleichungen">
+      <option value="lgl">ax+b=c</option>
+      <option value="quadglg">ax^2+bx+c=0</option>
+    </optgroup>
+
+    <optgroup label="Funktionen">
+      <option value="linfunc">f(x)=mx+c</option>
+      <option value="quadfunc">f(x)=ax^2+bx+c</option>
+    </optgroup>
+
+
+    <optgroup label="Geometrie 3d">
+      <option value="geraden_lagebeziehung">Lagebeziehung (Geraden)</option>
+      <option value="winkel_vektoren">Winkel (Vektoren)</option>
+      <option value="ebene_3Punktform">Ebene (3Punkt-Parameterform)</option>
+      <option value="ebene_normalform">Ebene (Normalform zu Koordinatenform)</option>
+    </optgroup>
+
+
+    <optgroup label="Stochastik">
+      <option value="binomial">Bernoulli</option>
+    </optgroup>
+
+
+
+    <optgroup label="Sonstiges">
+      <option value="frei">Freie Aufgabe</option>
+      <option value="prozente">Prozente</option>
+      <option value="pythagoras">Pythagoras</option>
+      <option value="trigonometrie">Trigonometrie</option>
+    </optgroup>
+
+  </select>
+  <input type="submit" value="Wählen">
+</form>
+
+<form action="{% url 'generator:erstelle_zertifikat' %}" target="output" method="post">
+{% csrf_token %}
+
+<input type="submit" value="Zertifikat erstellen">
+
+</form>

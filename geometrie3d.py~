@@ -1,0 +1,77 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+## Author: Pasquale Franz
+## Date: 03.06.2014
+
+######
+## The python-script generates a latex output which, (after compiling with pdflatex) creates random exercise sheets with solution.
+## The implented functions (exercises) so far:
+## Linear equations:
+##   linfunc(): ax+b=c
+##   linfunc0(): ax+b=0 
+## Quadratical equations:
+##   quadfunc(): ax2+bx+c=0
+##   quadfuncnormal(): x2+bx+c=0
+##   quadfuncnormalsym(): x2+c=0
+##   quadfuncsym(): ax2+c=0
+##   quadfunchomo(): ax2+bx=0
+
+import random
+from sympy import * 
+#from sympy import Integral, latex
+import numpy as np
+
+### Gradmass
+from mpmath import *
+
+# erklaere alle buchstaben neutzbaren zu sympy symbolen:
+from sympy.abc import *
+from collections import Counter
+from zufall import *
+
+
+def gerade3d_latex(sv,rv,name="g",parameter="r"):
+    gerade="\\vec{x}=\\Vekd{" + str(sv[0]) + "}{" + str(sv[1]) + "}{" + str(sv[2]) + "} + " + parameter + "\\Vekd{" + str(rv[0]) + "}{" + str(rv[1]) + "}{" + str(rv[2]) + "}" 
+    return "$" + name + ": " + gerade + "$"
+
+def gerade_identisch(sv,rv):
+    r=zufallZ01(-2,2)
+    sv2=sv+r*rv
+
+    k=zufallZ01(-2,2)
+    rv2=k*rv
+
+    return gerade3d_latex(sv2,rv2,"i")
+
+
+def gerade_parallel(sv,rv,name="p"):
+    r=zufallZ01(-2,2)
+    sv2=sv+rv+r*np.array([1,0,-1])
+
+    k=zufallZ01(-2,2)
+    rv2=k*rv
+
+    return gerade3d_latex(sv2,rv2,"p")
+
+
+
+def gerade_schnitt(sv,rv):
+    r=zufallZ0(-2,2)
+    sv2=sv+r*rv
+
+    k=zufallZ01(-2,2)
+    rv2=rv+k*np.array([1,0,-1])
+
+    return gerade3d_latex(sv2,rv2,"s")
+
+
+
+def gerade_windschief(sv,rv):
+    r=zufallZ01(-2,2)
+    sv2=sv+r*(rv+np.array([1,0,-1]))
+
+
+    rv2=np.cross(sv2-sv,rv)
+
+    return gerade3d_latex(sv2,rv2,"w")

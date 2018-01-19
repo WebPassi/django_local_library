@@ -1,0 +1,7 @@
+Die Arbeitslosenquote in #[Ort]# ist laut einer Studie um #[p]# \% gestiegen. Das entspricht #[W]# mehr Arbeitsuchende als vor einem Jahr. Bestimme, wieviele Arbeitslose #[Ort]# jetzt und vor einem Jahr hatte.  
+Zin # Grundwert # 0 # 5
+ 
+
+
+
+

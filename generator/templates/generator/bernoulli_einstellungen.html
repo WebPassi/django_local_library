@@ -1,0 +1,19 @@
+<form action="{% url 'generator:binomial' %}" target="_top" method="post">
+  {% csrf_token %}
+
+
+  <textarea rows="4" cols="50" name="aufgabentext">Bestimmen Sie die Wahrscheinlichkeiten der Bernoulli-Experimente mit den folgenden Kenngrößen und Trefferanzahl $k$.</textarea>
+  <br>
+
+  <br>
+  <label name="anzahl">Anazhl:
+    <input type="text" name="anzahl" value="3">
+  </label>
+  </label>
+
+  
+  <br>
+  <input type="submit" value="Erstellen">
+
+</form>
+

@@ -1,0 +1,191 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+## Author: Pasquale Franz
+## Date: 03.06.2014
+
+######
+## The python-script generates a latex output which, (after compiling with pdflatex) creates random exercise sheets with solution.
+## The implented functions (exercises) so far:
+## Linear equations:
+##   linfunc(): ax+b=c
+##   linfunc0(): ax+b=0 
+## Quadratical equations:
+##   quadfunc(): ax2+bx+c=0
+##   quadfuncnormal(): x2+bx+c=0
+##   quadfuncnormalsym(): x2+c=0
+##   quadfuncsym(): ax2+c=0
+##   quadfunchomo(): ax2+bx=0
+
+import random
+from sympy import * 
+#from sympy import Integral, latex
+
+# erklaere alle buchstaben neutzbaren zu sympy symbolen:
+from sympy.abc import *
+
+
+
+def binomial(n,k):
+    return factorial(n)*1.0 // factorial(k) // factorial(n-k)
+ 
+def binomial_write(n="",k=""):
+    if n == "":
+        n = random.randint(10,20)
+    if k == "":
+        k = random.randint(0,10)
+
+    fp.write("$\\binom{" + latex(n) + "}{" + latex(k) + "}=$")
+    ft.write("$\\binom{" + latex(n) + "}{" + latex(k) + "}=" + latex(binomial(n,k)) + "$")
+
+### Kenngroessen: genau 3 (k1) von 8 (n1) gelbe und 2 (k2) von 10 (n2) rote Kugeln 
+def lotto(n1="",n2="",k1="",k2=""):
+    if n1 == "":
+        n1 = random.randint(5,10)
+    if n2 == "":
+        n2 = random.randint(5,10)
+    if k1 == "":
+        k1 = random.randint(0,5)
+    if k2 == "":
+        k2 = random.randint(0,5)
+
+    n = n1+n2
+    k = k1+k2
+    fp.write("$\\frac{\\binom{" + latex(n1) + "}{" + latex(k1) + "}\cdot \\binom{" + latex(n2) + "}{" + latex(k2) + "}}{\\binom{" + latex(n) + "}{" + latex(k) + "}}=$")
+    ft.write("$\\frac{\\binom{" + latex(n1) + "}{" + latex(k1) + "}\cdot \\binom{" + latex(n2) + "}{" + latex(k2) + "}}{\\binom{" + latex(n) + "}{" + latex(k) + "}}=" + latex((binomial(n1,k1)*binomial(n2,k2) / binomial(n,k)*100).evalf(3)) + "\\%$")
+
+### Kenngroessen: genau 3 (k1) von 8 (n1) gelbe, 2 (k2) von 10 (n2) rote und 7 (k3) von 15 (n3) schwarze Kugeln 
+def lottodrei(n1="",n2="",n3="",k1="",k2="",k3=""):
+    if n1 == "":
+        n1 = random.randint(5,10)
+    if n2 == "":
+        n2 = random.randint(5,10)
+    if n3 == "":
+        n3 = random.randint(5,10)
+    if k1 == "":
+        k1 = random.randint(0,5)
+    if k2 == "":
+        k2 = random.randint(0,5)
+    if k3 == "":
+        k3 = random.randint(0,5)
+
+    n = n1+n2+n3
+    k = k1+k2+k3
+    fp.write("$\\frac{\\binom{" + latex(n1) + "}{" + latex(k1) + "}\cdot \\binom{" + latex(n2) + "}{" + latex(k2) + "}\cdot \\binom{" + latex(n3) + "}{" + latex(k3) + "}}{\\binom{" + latex(n) + "}{" + latex(k) + "}}=$")
+    ft.write("$\\frac{\\binom{" + latex(n1) + "}{" + latex(k1) + "}\cdot \\binom{" + latex(n2) + "}{" + latex(k2) + "}\cdot \\binom{" + latex(n3) + "}{" + latex(k3) + "}}{\\binom{" + latex(n) + "}{" + latex(k) + "}}=" + latex((binomial(n1,k1)*binomial(n2,k2) / binomial(n,k)*100).evalf(3)) + "\\%$")
+
+def bernoullip(n="",p="",k=""):
+    if n == "":
+        n = random.randint(0,10)
+    if k == "":
+        k = random.randint(0,10)
+    
+    if k>n:
+        tmp = n
+        n = k
+        k = tmp
+
+    if p == "":
+        p = Float(random.random()).evalf(2)
+
+    ft.write("$n=" + latex(n) + "$, $p=" + latex(p) + "$, $k=" + latex(k) + "$ \\\\ \n")
+    ft.write("$P(X=" + latex(k) + ")=$\\\\ $\\binom{" + latex(n) + "}{" + latex(k) + "}\\cdot" + latex(p) + "^{" + latex(k) + "}\\cdot" + latex(1-p) + "^{" + latex(n-k) + "}=$ \\\\ \n")
+    ft.write("$" + latex((binomial(n,k)*(p**k)*(1-p)**(n-k)*100).evalf(2)) + "\\%$")
+    
+
+
+def kreuze_mengen(mengen):
+
+    if len(mengen) == 1:
+        return [mengen[0]]
+    elif len(mengen) == 2:
+        kreuzprodukt=[ (z1,z2) for z1 in mengen[0] for z2 in mengen[1] ]
+        
+
+        return kreuzprodukt
+    elif len(mengen) > 2:
+        neue_menge=[]
+        for kombination in mengen[0]:
+            for kugel in mengen[1]:
+                neue_menge.append(list(kombination).append(kugel))
+
+
+        mengen[0]=neue_menge
+
+        return kreuze_mengen(mengen)
+    else:
+        return ""
+
+
+def ergebnismenge(kugeln="",zuege="",zuruecklegen="",reihenfolge=""):
+    ### Kugeln zufaellig bereit stellen
+    if kugeln == "":
+        anzahl_arten=random.randint(1,5)
+
+        arten=["g","b","v","s","r","w","l","o"]
+        art=[]
+        anzahl=[]
+        for i in list(range(anzahl_arten)):
+            art_zuf=random.choice(arten)
+            art.append(art_zuf)
+            anzahl.append(random.randint(1,5))
+            arten.remove(art_zuf)
+
+        kugeln_dict=dict(zip(art,anzahl))
+
+        ### Kugeln als Liste: b,b,b,r,r,..
+        kugeln = []
+
+        for item in kugeln_dict.items():
+            for anz in list(range(item[1])):
+                kugeln.append(item[0])
+
+    if type(kugeln) is dict:
+        kugeln_dict=kugeln
+        ### Kugeln als Liste: b,b,b,r,r,..
+        kugeln = []
+
+        for item in kugeln_dict.items():
+            for anz in list(range(item[1])):
+                kugeln.append(item[0])
+
+
+    ### zufallige Anzahl der Zuege
+    if zuege == "":
+        zuege=random.randint(2,2)
+
+
+    ### Prinzip 1: Mit Zuruecklegen, mit Reihenfolge
+    if zuruecklegen == "mZ" and reihenfolge == "mR":
+
+        kugeln_set=set(kugeln)
+        
+        hilfsmengen=[]
+        for zug in list(range(zuege)):
+            hilfsmengen.append(kugeln_set)        
+
+        ergebnismenge=kreuze_mengen(hilfsmengen)
+
+        return ergebnismenge
+
+
+    ### Prinzip 2: Mit Zuruecklegen, ohne Reihenfolge
+    if zuruecklegen == "mZ" and reihenfolge == "oR":
+
+        kugeln_set=set(kugeln)
+        
+        hilfsmengen=[]
+        for zug in list(range(zuege)):
+            hilfsmengen.append(kugeln_set)        
+
+        ergebnismenge=kreuze_mengen(hilfsmengen)
+
+        for i,ergebnis in enumerate(ergebnismenge):
+            ergebnis_list=list(ergebnis)
+            ergebnis_list.sort()
+            ergebnismenge[i]=tuple(ergebnis_list)
+
+
+        return set(ergebnismenge)
+
+    

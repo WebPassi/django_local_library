@@ -1,0 +1,47 @@
+<head>
+  <style>
+    input[type="number"] {
+    width:50px;
+    }
+  </style>
+</head>
+
+<form action="{% url 'generator:zahlen_ordnen' %}" target="_top" method="post">
+  {% csrf_token %}
+
+  <textarea rows="4" cols="50" name="aufgabentext" value="hallo">Ordne die folgenden Zahlen der Größe nach. Beginne mit der kleinsten Zahl.</textarea>
+  <br>
+
+  <label for "anzahl"> Wie viele Zahlen: </label>
+  <input type="number" id="anzahl" name="anzahl" value="5">
+
+  <fieldset>
+
+    <input type="radio" id="Z" name="zahlenbereich" value="Z" checked="checked">
+    <label for="Z"> Ganze Zahlen </label><br> 
+
+    <input type="radio" id="dezimalzahlen" name="zahlenbereich" value="dezimal">
+    <label for="dezimalzahlen"> Dezimalzahlen </label><br> 
+
+    <input type="radio" id="brueche" name="zahlenbereich" value="brueche">
+    <label for="brueche"> Brüche </label><br> 
+
+  </fieldset>
+
+  <label for="von"> Von: <label>
+  <input type="number" id="von" name="von" value="-10"><br>
+
+  <label for="bis"> Bis: <label>
+  <input type="number" id="bis" name="bis" value="10"><br>
+
+  <label for="stellen"> Nachkommastellen: <label>
+  <input type="number" id="stellen" name="stellen" value="2"><br>
+  
+	 
+
+
+<br>
+<input type="submit" value="Erstellen">
+
+</form>
+

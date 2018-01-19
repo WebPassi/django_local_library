@@ -1,0 +1,21 @@
+<form action="{% url 'generator:manuell_ab' %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Letztes Projekt">
+</form>
+
+<form action="{% url 'generator:projekt_laden' %}" method="post">
+{% csrf_token %}
+    <input type="submit" value="Projekt laden">
+</form>
+
+<form action="{% url 'generator:neues_projekt' %}" target="_top" method="post">
+{% csrf_token %}
+<input type="submit" value="Neues Projekt">
+</form>
+
+
+<form action="{% url 'generator:projekt_loeschen' %}" target="_top" method="post">
+{% csrf_token %}
+<input type="submit" value="Projekt löschen">
+</form>
+

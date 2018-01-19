@@ -1,0 +1,106 @@
+from django.conf.urls import url
+
+from generator import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    #url(r'^(?P<n>\d+)/$', views.detail, name='detail'),
+    #url(r'^(?P<question_id>\d+)/$', views.detail, name='detail'),)
+
+    url(r'uebersicht_aufgaben/$', views.uebersicht_aufgaben, name='uebersicht_aufgaben'),
+
+    url(r'uebersicht_aufgaben/(?P<nummer>[0-9]+)/$', views.uebersicht_aufgaben, name='uebersicht_aufgaben'),
+
+
+    url(r'^auto_ab/$', views.auto_ab, name='auto_ab'),
+    url(r'^auto_ab/quad_glg/$', views.quad_glg, name='quad_glg'),
+    url(r'^auto_ab/lin_glg/$', views.lin_glg, name='lin_glg'),
+    url(r'^auto_ab/lin_func/$', views.lin_func, name='lin_func'),
+    url(r'^auto_ab/terme/$', views.terme, name='terme'),
+    url(r'^auto_ab/normalparabel/$', views.normalparabel, name='normalparabel'),
+    url(r'^auto_ab/parabel/$', views.parabel, name='parabel'),
+    url(r'^auto_ab/scheitelpunktform/$', views.scheitelpunktform, name='scheitelpunktform'),
+    url(r'^auto_ab/linFunc_os/$', views.linFunc_os, name='linFunc_os'),
+    url(r'^auto_ab/prozentrechnung/$', views.prozentrechnung, name='prozentrechnung'),
+
+    url(r'^freie_aufgabe/$', views.freie_aufgabe, name='freie_aufgabe'),
+
+    #url(r'^freie_aufgabe/(?P<position>[0-9]+)$', views.freie_aufgabe, name='freie_aufgabe'),
+
+    #url(r'^freie_aufgabe_erstellen/(?P<aufgabenname>[a-zA-Z0-9._]*)$', views.freie_aufgabe_erstellen, name='freie_aufgabe_erstellen'),
+
+    url(r'^freie_aufgabe_erstellen/$', views.freie_aufgabe_erstellen, name='freie_aufgabe_erstellen'),
+
+
+
+    url(r'^zertifikat_parabeln_potenzen/$', views.zertifikat_parabeln_potenzen, name='zertifikat_parabeln_und_potenzen'),
+
+    url(r'^pdf_view/$', views.pdf_view, name='pdf_view'),
+
+
+    url(r'^output/$', views.output, name='output'),
+    url(r'^output_direkt/(?P<name>[a-zA-Z._]+)/$', views.output_direkt, name='output_direkt'),
+    #url(r'output/(?P<projektname>[a-zA-Z._]+)/$', views.output, name='output'),
+
+
+    ##### Kopf erstellen
+    url(r'^erstelle_zertifikat/$', views.erstelle_zertifikat, name='erstelle_zertifikat'),
+
+
+    ##### Arbeitsblatt erstellen
+    url(r'^manuell_ab/$', views.manuell_ab, name='manuell_ab'),
+
+    url(r'^manuell_ab/(?P<projektname>[a-zA-Z0-9äAöÖüÜß_.]+)/$', views.manuell_ab, name='manuell_ab'),
+
+
+    #url(r'manuell_ab/output/(?P<name>[a-zA-Z]+)/$', views.output, name='output'),
+    #url(r'manuell_ab/output/$', views.output, name='output'),
+    
+    url(r'^neues_projekt/$', views.neues_projekt, name='neues_projekt'),
+    url(r'^projekt_laden/$', views.projekt_laden, name='projekt_laden'),
+    url(r'^projekt_loeschen/$', views.projekt_loeschen, name='projekt_loeschen'),
+    url(r'^projekt_loeschen_submit/(?P<projektname>[a-zA-Z0-9äAöÖüÜß_.]+)/$', views.projekt_loeschen_submit, name='projekt_loeschen_submit'),
+
+
+    url(r'^projekt_speichern/$', views.projekt_speichern, name='projekt_speichern'),
+
+    #url(r'^manuell_ab/konzept/$', views.konzept, name='konzept'),
+    url(r'^konzept/$', views.konzept, name='konzept'),
+
+
+    url(r'^neue_aufgabe/$', views.aufgabenwahl, name='aufgabenwahl'),
+
+    url(r'^aufgabe_loeschen/$', views.aufgabe_loeschen, name='aufgabe_loeschen'),
+
+
+    url(r'^aufgabe_neu_berechnen/(?P<nummer>[0-9]+)/$', views.aufgabe_neu_berechnen, name='aufgabe_neu_berechnen'),
+
+
+
+
+    ############################## Aufgaben
+
+    url(r'^zahlen_ordnen/$', views.zahlen_ordnen, name='zahlen_ordnen'),
+
+    url(r'^aufgabe_terme_addieren/$', views.aufgabe_terme_addieren, name='aufgabe_terme_addieren'),
+
+
+    url(r'^terme_eine_klammer/$', views.terme_eine_klammer, name='terme_eine_klammer'),
+
+
+    url(r'^pythagoras/$', views.pythagoras, name='pythagoras'),
+
+    url(r'^trigonometrie/$', views.trigonometrie, name='trigonometrie'),
+
+    url(r'^geraden_lagebeziehung/$', views.geraden_lagebeziehung, name='geraden_lagebeziehung'),
+
+
+    url(r'^ebene_3Punktform/$', views.ebene_3Punktform, name='ebene_3Punktform'),
+    url(r'^winkel_vektoren/$', views.winkel_vektoren, name='winkel_vektoren'),
+    url(r'^ebene_normalform/$', views.ebene_normalform, name='ebene_normalform'),
+
+    
+
+]
+
+

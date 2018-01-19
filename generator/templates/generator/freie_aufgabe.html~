@@ -1,0 +1,12 @@
+<form action="{% url 'generator:freie_aufgabe_erstellen' aufgabenname %}" target="_top" method="post">
+{% csrf_token %}
+<textarea name="aufgabe" rows="5" cols="50">{{ aufgabentext }}
+</textarea>
+
+<p>Lösung:</p>
+<textarea name="loesung" rows="5" cols="50">{{ loesung }}
+</textarea>
+
+<input type="submit" value="Wählen">
+</form>
+

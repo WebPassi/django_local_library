@@ -1,0 +1,28 @@
+<head>
+
+<style>
+iframe {
+frameborder: 0;
+scrolling: no;
+}
+
+
+
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+</style>
+</head>
+
+
+
+<iframe width="49%" height="100%" frameborder="1" scrolling="yes" src="{% url 'generator:konzept' %}" name="konzept">
+</iframe>
+
+<iframe width="49%" height="100%" frameborder="1" scrolling="yes" src="{% url 'generator:output' %}" name="output">
+</iframe>
+    

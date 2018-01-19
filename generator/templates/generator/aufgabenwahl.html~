@@ -1,0 +1,26 @@
+<form action="{% url 'generator:aufgabenwahl' %}" method="post">
+{% csrf_token %}
+  <select name="aufgabenbereich" size="20">
+    <optgroup label="Gleichungen">
+      <option name="lgl">ax+b=c</option>
+      <option name="quadglg">ax^2+bx+c=0</option>
+    </optgroup>
+
+    <optgroup label="Funktionen">
+      <option name="linfunc">f(x)=mx+c</option>
+      <option name="quadfunc">f(x)=ax^2+bx+c</option>
+    </optgroup>
+
+    <optgroup label="Terme">
+      <option name="terme_addieren">3a+2,4b-1,9a</option>
+      <option name="terme_eine_klammer">3(2x+3)</option>
+      <option name="terme_zwei_klammern">3(2x+3)-4(x-2)</option>
+    </optgroup>
+
+    <optgroup label="Sonstiges">
+      <option name="prozente">Prozente</option>
+    </optgroup>
+  </select>
+  <input type="submit" value="Wählen">
+</form>
+

@@ -1,0 +1,3 @@
+Bei einem Frachterungl\"uck sind #[Dividend]# \"Ol ins Meer gelaufen. Die Dicke der \"Olschicht betr\"agt #[Divisor]#. Berechne die Wasserfl\"ache, die von \"Ol bedeckt ist.
+PaPo # Term # 0 # 5
+

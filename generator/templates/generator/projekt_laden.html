@@ -1,0 +1,20 @@
+<form action="{% url 'generator:index' %}" target="_top" method="post">
+{% csrf_token %}
+<input type="submit" value="Zurück">
+</form>
+
+
+<form action="{% url 'generator:neues_projekt' %}" target="_top" method="post">
+{% csrf_token %}
+<input type="submit" value="Neues Projekt">
+</form>
+
+
+{% for projekt in projekte %}
+<form action="{% url 'generator:manuell_ab' projekt %}" target="_top" method="post">
+{% csrf_token %}
+<button type="submit" id="{{ projekt }}" name="projektname" value="{{ projekt }}">Wählen</button>
+<label for="{{ projekt }}"><b>{{ projekt }}</b></label><br>
+</form>
+{% endfor %}
+

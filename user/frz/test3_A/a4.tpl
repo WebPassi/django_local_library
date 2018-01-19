@@ -1,0 +1,1 @@
+aufg_ebene_3Punktform(art=Z,runden=2,intervall=[-10,10],aufgabentext="Geben Sie zur folgenden Ebene eine Koordinatenform an.")

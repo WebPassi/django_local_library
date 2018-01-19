@@ -1,0 +1,8 @@
+<form action="{% url generator:projekt_laden %}" method="post" enctype="multipart/form-data" >
+{% csrf_token %}
+  <label>Wählen Sie ein Projekt aus.
+    <input name="datei" type="file" size="50" accept="text/*"> 
+  </label>  
+  <button></button>
+</form>
+

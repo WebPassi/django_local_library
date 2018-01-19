@@ -1,0 +1,3 @@
+Eine \"agyptische Pyramide hat eine quadratische Grundfläche von #[A]#. Es wurden #[V]# Stein verbaut. Berechne die H\"ohe der Pyramide.
+KrKo # Pyramide # 0 # 5
+ 

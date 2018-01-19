@@ -1,0 +1,13 @@
+
+<form action="{% url 'generator:neues_projekt' %}" target="_top" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Neues Projekt">
+</form>
+<form action="{% url 'generator:projekt_laden' %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Projekt laden">
+</form>
+<form action="{% url 'generator:projekt_speichern' %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Projekt speichern">
+</form>

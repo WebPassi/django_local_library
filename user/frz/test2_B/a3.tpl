@@ -1,0 +1,1 @@
+Geben Sie für die $x_1-x_3$ - Ebene eine Darstellung in Parameter -, Normal - und Koordinatenform an.

@@ -1,0 +1,2 @@
+Berechne die Oberfl\"ache und das Volumen eines Zylinders mit einem Radius von #[r]# und einer H\"ohe von #[h]#. Fertige eine sinnvolle Planfigur an.
+KrKo # Zylinder # 0 # 5
