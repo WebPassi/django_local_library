@@ -1,0 +1,10 @@
+whitenoise==3.3.1
+sympy==0.7.6.1
+reportlab==3.3.0
+psycopg2==2.7.3.2
+mpmath==0.19
+numpy==1.13.3
+gunicorn==19.7.1
+dj-database-url==0.4.2
+Django==1.9.2
+
