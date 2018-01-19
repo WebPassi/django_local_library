@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} 
+\usepackage{amsmath}  
+
+
+
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe} 
+
+
+
+\begin{document}
+\begin{flushleft}
+\begin{aufgabe} ~ \ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item $f(x)=$$x^{8}$\\
+
+xxx\item $f(x)=$$x^{3}$\\
+
+xxx\item $f(x)=$$x^{3}$\\
+
+xxx\item $f(x)=$$x^{5}$\\
+
+xxx\item $f(x)=$$x^{4}$\\
+
+xxx\item $f(x)=$$x^{8}$\\
+
+xxx\end{enumerate} 
+\end{multicols} 
+\end{aufgabe}\vspace{1em}\begin{aufgabe} ~ \ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item $f(x)=$$- 6 x^{8}$\\
+
+\item $f(x)=$$3 x^{2}$\\
+
+\item $f(x)=$$9 x^{4}$\\
+
+\item $f(x)=$$x^{5}$\\
+
+\item $f(x)=$$9 x^{10}$\\
+
+\item $f(x)=$$9 x^{8}$\\
+
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe}\vspace{1em}\begin{aufgabe} ~ \ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item $f(x)=$$- 9,5 x^{5}$\\
+
+\item $f(x)=$$7,2$\\
+
+\item $f(x)=$$-6,6$\\
+
+\item $f(x)=$$- 0,4 x^{9}$\\
+
+\item $f(x)=$$8,9$\\
+
+\item $f(x)=$$9,7$\\
+
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe}\vspace{1em}\begin{aufgabe} ~ \ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item $f(x)=$$2 x^{9} + 2 x^{5}$\\
+
+\item $f(x)=$$5 x^{8} + 2 x^{6}$\\
+
+\item $f(x)=$$x^{10} - x^{2}$\\
+
+\item $f(x)=$$- x^{6} + 7 x^{2}$\\
+
+\item $f(x)=$$- 2 x^{8} + 8 x^{6}$\\
+
+\item $f(x)=$$- 8 x^{7} + 2 x^{5}$\\
+
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe}\vspace{1em}\begin{aufgabe} ~ \ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item $f(x)=$$6 x^{5} + 3 x^{4} + 3 x$\\
+
+\item $f(x)=$$9 x^{7} + 7 x$\\
+
+\item $f(x)=$$8 x^{4} + 2 x^{2} + 7$\\
+
+\item $f(x)=$$x^{10} + 4 x^{6} + 2 x^{4}$\\
+
+\item $f(x)=$$4 x^{7} + 16 x^{6}$\\
+
+\item $f(x)=$$8 x^{7} + 2 x^{6} + 9 x^{2}$\\
+
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe}\vspace{1em}
+\end{flushleft} 
+\end{document}

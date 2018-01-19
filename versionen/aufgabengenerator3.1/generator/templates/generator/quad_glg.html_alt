@@ -1,0 +1,22 @@
+Hier stehen ganz viele quadratische Gleichungen.
+<form action="aufgabenbereich.html" method="post">
+{% csrf_token %}
+  <fieldset> 
+    <label for="check1">
+      <input type="checkbox" name="zutat" value="a=1" id="check1">
+      a=1
+    </label> 
+    <br>
+    <label for="check2">
+       <input type="checkbox" name="zutat" value="b=0" id="check2">
+       b=0
+    </label> 
+    <br>
+    <label for="check3">
+      <input type="checkbox" name="zutat" value="c=0" id="check3">
+      c=0
+    </label> 
+  </fieldset> 
+<input type="submit" value="Wählen" />
+</form>
+

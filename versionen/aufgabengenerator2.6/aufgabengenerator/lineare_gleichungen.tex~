@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} 
+\usepackage{amsmath}  
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\pagestyle{empty} 
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+6 x = -1
+\item 
+6 x = -7
+\item 
+6 x = -10
+\item 
+9 x = -4
+\item 
+5 x = -4
+\item 
+- 6 x = 9
+\item 
+- 4 x = -7
+\item 
+- x = -9
+\item 
+4 x = -3
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+- 5 x + 4 = 0
+\item 
+5 x + 3 = 0
+\item 
+2 x - 9 = 0
+\item 
+- 9 x - 9 = 0
+\item 
+6 x + 10 = 0
+\item 
+- 7 x + 4 = 0
+\item 
+- 8 x - 5 = 0
+\item 
+4 x + 5 = 0
+\item 
+3 x + 5 = 0
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+- 10 x + 2 = -4
+\item 
+4 x + 5 = -4
+\item 
+- 5 x - 2 = -9
+\item 
+x + 8 = -8
+\item 
+- 4 x - 10 = 6
+\item 
+- 3 x - 9 = -6
+\item 
+x + 1 = 9
+\item 
+x + 5 = -2
+\item 
+3 x - 3 = 1
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+8 x - 10 = 6 x + 3
+\item 
+- 6 x - 8 = 6 x - 6
+\item 
+x - 8 = 7 x + 7
+\item 
+8 x - 5 = 4 x - 7
+\item 
+5 x + 4 = - 10 x + 9
+\item 
+2 x + 3 = - x - 4
+\item 
+- 8 x - 3 = - 3 x - 4
+\item 
+10 x + 4 = x + 3
+\item 
+9 x = - 9 x - 2
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+9(- 9 x - 2) = 6
+\item 
+-8(9 x - 3) = -7
+\item 
+5(5 x + 5) = -8
+\item 
+10(- 7 x + 7) = 1
+\item 
+-10(- 7 x - 1) = 9
+\item 
+-10(- 7 x - 1) = 0
+\item 
+-5(- 8 x) = -8
+\item 
+-7(4 x + 10) = -1
+\item 
+3(- 10 x + 1) = -4
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{multicols}{2} 
+\begin{enumerate}[a)] 
+\item 
+8(x - 9) = -4(- 5 x - 8)
+\item 
+2(- 8 x + 10) = -10(8 x - 5)
+\item 
+-10(- 4 x + 2) = 3(- 8 x + 3)
+\item 
+-7(6 x - 6) = - 4 x + 5
+\item 
+-10(10 x + 5) = 4(- 8 x + 7)
+\item 
+4 x - 4 = 10(- 2 x + 9)
+\item 
+6(- 9 x - 5) = 4(- 3 x - 9)
+\item 
+-5(5 x - 5) = 4(8 x - 6)
+\item 
+-9(- 10 x + 6) = -3(- 4 x - 2)
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+$\frac{7}{4}$ , $\frac{69}{70}$ , $\frac{4}{7}$ , $53$ , $-1$ , $- \frac{5}{3}$ , $\frac{4}{5}$ , $48$ , $\frac{3}{5}$ , $- \frac{1}{6}$ , $47$ , $\frac{7}{30}$ , $49$ , $\frac{7}{5}$ , $- \frac{5}{2}$ , $- \frac{1}{2}$ , $- \frac{1}{70}$ , $- \frac{3}{2}$ , $- \frac{1}{7}$ , $- \frac{3}{4}$ , $\frac{1}{5}$ , $\frac{1}{3}$ , $\frac{9}{2}$ , $- \frac{1}{6}$ , $- \frac{7}{3}$ , $-1$ , $\frac{31}{72}$ , $- \frac{4}{9}$ , $46$ , $- \frac{33}{25}$ , $- \frac{5}{8}$ , $- \frac{7}{6}$ , $\frac{13}{2}$ , $-7$ , $- \frac{1}{9}$ , $- \frac{4}{5}$ , $52$ , $-16$ , $- \frac{5}{4}$ , $\frac{4}{3}$ , $- \frac{5}{3}$ , $8$ , $- \frac{5}{3}$ , $- \frac{3}{5}$ , $- \frac{1}{9}$ , $- \frac{69}{28}$ , $9$ , $50$ , $45$ , $- \frac{9}{4}$ , $-4$ , $- \frac{8}{27}$ , $- \frac{1}{5}$ , $51$ , \\ 
+$- \frac{1}{6}$ , $- \frac{7}{6}$ , $- \frac{5}{3}$ , $- \frac{4}{9}$ , $- \frac{4}{5}$ , $- \frac{3}{2}$ , $\frac{7}{4}$ , $9$ , $- \frac{3}{4}$ , $\frac{4}{5}$ , $- \frac{3}{5}$ , $\frac{9}{2}$ , $-1$ , $- \frac{5}{3}$ , $\frac{4}{7}$ , $- \frac{5}{8}$ , $- \frac{5}{4}$ , $- \frac{5}{3}$ , $\frac{3}{5}$ , $- \frac{9}{4}$ , $\frac{7}{5}$ , $-16$ , $-4$ , $-1$ , $8$ , $-7$ , $\frac{4}{3}$ , $\frac{13}{2}$ , $- \frac{1}{6}$ , $- \frac{5}{2}$ , $- \frac{1}{2}$ , $\frac{1}{3}$ , $- \frac{7}{3}$ , $\frac{1}{5}$ , $- \frac{1}{9}$ , $- \frac{1}{9}$ , $- \frac{8}{27}$ , $\frac{31}{72}$ , $- \frac{33}{25}$ , $\frac{69}{70}$ , $- \frac{1}{70}$ , $- \frac{1}{7}$ , $- \frac{1}{5}$ , $- \frac{69}{28}$ , $\frac{7}{30}$ , \end{flushleft} 
+    \end{document}

@@ -1,0 +1,2 @@
+Herr Stein leiht sich von der Bank #[G,N,3000,6000]# zu einem Zinssatz von #[p,N,2,4]# pro Jahr.
+Berechne die Zinsen, die er nach einem Jahr an die Bank bezahlen muss.

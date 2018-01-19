@@ -1,0 +1,59 @@
+#! /usr/bin/env python
+
+## Author: Pasquale Franz
+## Date: 26.01.2015
+
+######
+## Just the skelet of a latex file
+
+
+# erklaere alle buchstaben neutzbaren zu sympy symbolen:
+from sympy.abc import *
+
+
+
+### note: um einen \ mit write() zu erzeugen muss  \\ getippt werden.
+
+class Skelet:
+    def head(self):
+        lf = open('datei.tex','w')
+        lf.write('\
+\\documentclass[12pt]{article}\n\
+\\usepackage[utf8]{inputenc}\n\
+\\usepackage{paralist} \n\
+\\usepackage{amssymb}  \n\
+\\usepackage{amsthm}   \n\
+\\usepackage{multicol} \n\
+\\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} \n\
+\\usepackage{amsmath}  \n\
+\\begin{document}\n\
+\\begin{flushleft}\n')
+        lf.close()
+    def end(self):
+        lf = open('datei.tex','a')
+        lf.write('\
+\\end{flushleft}\n\
+\\end{document}')
+        lf.write('\n')
+        lf.close()
+    def body(self):
+        lf = open('datei.tex','a')
+        lf.write('Nur ein Test')
+        lf.write('\n')
+        lf.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

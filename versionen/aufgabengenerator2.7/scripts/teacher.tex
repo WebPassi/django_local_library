@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\pagestyle{empty} 
+\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} 
+\usepackage{amsmath}  
+
+
+
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document}
+\begin{flushleft}
+\begin{aufgabe} ~  
+$$f(x)=- 4 x^{3}$$ 
+{\bf Funktion und Ableitung:} 
+\begin{align*} 
+f(x)&=- 4 x^{3}\\ 
+f'(x)&=- 12 x^{2}\\ 
+f''(x)&=- 24 x\\ 
+\end{align*} 
+{\bf Verhalten im Unendlichen:} 
+\[ \lim_{x\rightarrow -\infty} f(x) =\infty\]\[ \lim_{x\rightarrow\infty} f(x) =-\infty\]{\bf Nullstellen:} 
+\begin{align*} 
+f(x)&=0 \\ 
+- 4 x^{3}&=0 \\ 
+x&=0\end{align*} 
+$\Rightarrow$ Nullstelle bei $N(0|0)$ \\ 
+{\bf Extrempunkte (Notwendige Bedingung):} 
+\begin{alignat*}{7} 
+f'(x)&=& &0& \\ 
+- 12 x^{2}&=& &0& \\ 
+x&=& &0& \quad &:& \quad f(0)&=& \, &0\\ 
+\end{alignat*} 
+{\bf Art der Extrempunkte ermitteln:} \\[1em] 
+{\em 1. M\"oglichkeit:} Funktionswerte in einer gen\"ugend kleinen Umgebung vergleichen \\ 
+$$f(-0.1)=0.004  >  f(0)=0  >  f(0.1)=-0.004$$\\ 
+$\Rightarrow$ Sattelpunkt bei $(0|0)$ \\ 
+\vspace{1em}{\em 2. M\"oglichkeit:} Monotonieverhalten untersuchen \\ 
+$$f'(-0.1)=-0.12\quad \Rightarrow \text{ monoton fallend} $$$$f'(0)=0 \quad \Rightarrow \text{ waagerechte Tangente} $$$$f'(0.1)=-0.12\quad \Rightarrow \text{ monoton fallend} $$$\Rightarrow$ Sattelpunkt bei $(0|0)$ \\ 
+\vspace{1em}
+\end{aufgabe}\clearpage\begin{aufgabe} ~  
+$$f(x)=x^{3} + x^{2}$$ 
+{\bf Funktion und Ableitung:} 
+\begin{align*} 
+f(x)&=x^{3} + x^{2}\\ 
+f'(x)&=3 x^{2} + 2 x\\ 
+f''(x)&=2 \left(3 x + 1\right)\\ 
+\end{align*} 
+{\bf Verhalten im Unendlichen:} 
+\[ \lim_{x\rightarrow -\infty} f(x) =-\infty\]\[ \lim_{x\rightarrow\infty} f(x) =\infty\]{\bf Nullstellen:} 
+\begin{align*} 
+f(x)&=0 \\ 
+x^{3} + x^{2}&=0 \\ 
+x_1&=-1.0\\ 
+x_2&=0\\ 
+\end{align*} 
+$\Rightarrow$ Nullstelle bei $N_1(-1.0|0)$ \\ 
+$\Rightarrow$ Nullstelle bei $N_2(0|0)$ \\ 
+{\bf Extrempunkte (Notwendige Bedingung):} 
+\begin{alignat*}{7} 
+f'(x)&=& &0& \\ 
+x \left(3 x + 2\right)&=& &0& \\ 
+x_1&=& &-0.67& \quad &:& \quad &f(-0.67)&=& \,0.15\\ 
+x_2&=& &0& \quad &:& \quad &f(0)&=& \,0\\ 
+\end{alignat*} 
+{\bf Art der Extrempunkte ermitteln:} \\[1em] 
+{\em 1. M\"oglichkeit:} Funktionswerte in einer gen\"ugend kleinen Umgebung vergleichen \\ 
+$$f(-0.77)=0.137  <  f(-0.67)=0.148  >  f(-0.57)=0.139$$\\ 
+$\Rightarrow$ Hochpunkt bei $(-0.67|0.15)$ \\ 
+\vspace{1em}$$f(-0.1)=0.009  >  f(0)=0  <   f(0.1)=0.011$$\\ 
+$\Rightarrow$ Tiefpunkt bei $(0|0)$ \\ 
+\vspace{1em}{\em 2. M\"oglichkeit:} Monotonieverhalten untersuchen \\ 
+$$f'(-0.77)=0.23\quad \Rightarrow \text{ monoton steigend} $$$$f'(-0.67)=0 \quad \Rightarrow \text{ waagerechte Tangente} $$$$f'(-0.57)=-0.17\quad \Rightarrow \text{ monoton fallend} $$$\Rightarrow$ Hochpunkt bei $(-0.67|0.15)$ \\ 
+\vspace{1em}$$f'(-0.1)=-0.17\quad \Rightarrow \text{ monoton fallend} $$$$f'(0)=0 \quad \Rightarrow \text{ waagerechte Tangente} $$$$f'(0.1)=0.23\quad \Rightarrow \text{ monoton steigend} $$$\Rightarrow$ Tiefpunkt bei $(0|0)$ \\ 
+\vspace{1em}
+\end{aufgabe}\clearpage\begin{aufgabe} ~  
+$$f(x)=- 3 x^{3} + 4 x$$ 
+{\bf Funktion und Ableitung:} 
+\begin{align*} 
+f(x)&=- 3 x^{3} + 4 x\\ 
+f'(x)&=- 9 x^{2} + 4\\ 
+f''(x)&=- 18 x\\ 
+\end{align*} 
+{\bf Verhalten im Unendlichen:} 
+\[ \lim_{x\rightarrow -\infty} f(x) =\infty\]\[ \lim_{x\rightarrow\infty} f(x) =-\infty\]{\bf Nullstellen:} 
+\begin{align*} 
+f(x)&=0 \\ 
+- 3 x^{3} + 4 x&=0 \\ 
+x_1&=0\\ 
+x_2&=-1.2\\ 
+x_3&=1.2\\ 
+\end{align*} 
+$\Rightarrow$ Nullstelle bei $N_1(0|0)$ \\ 
+$\Rightarrow$ Nullstelle bei $N_2(-1.2|0)$ \\ 
+$\Rightarrow$ Nullstelle bei $N_3(1.2|0)$ \\ 
+{\bf Extrempunkte (Notwendige Bedingung):} 
+\begin{alignat*}{7} 
+f'(x)&=& &0& \\ 
+- 9 x^{2} + 4&=& &0& \\ 
+x_1&=& &-0.67& \quad &:& \quad &f(-0.67)&=& \,-1.8\\ 
+x_2&=& &0.67& \quad &:& \quad &f(0.67)&=& \,1.8\\ 
+\end{alignat*} 
+{\bf Art der Extrempunkte ermitteln:} \\[1em] 
+{\em 1. M\"oglichkeit:} Funktionswerte in einer gen\"ugend kleinen Umgebung vergleichen \\ 
+$$f(-0.77)=-1.71  >  f(-0.67)=-1.78  <   f(-0.57)=-1.72$$\\ 
+$\Rightarrow$ Tiefpunkt bei $(-0.67|-1.8)$ \\ 
+\vspace{1em}$$f(0.57)=1.72  <  f(0.67)=1.78  >  f(0.77)=1.71$$\\ 
+$\Rightarrow$ Hochpunkt bei $(0.67|1.8)$ \\ 
+\vspace{1em}{\em 2. M\"oglichkeit:} Monotonieverhalten untersuchen \\ 
+$$f'(-0.77)=-1.29\quad \Rightarrow \text{ monoton fallend} $$$$f'(-0.67)=0 \quad \Rightarrow \text{ waagerechte Tangente} $$$$f'(-0.57)=1.11\quad \Rightarrow \text{ monoton steigend} $$$\Rightarrow$ Tiefpunkt bei $(-0.67|-1.8)$ \\ 
+\vspace{1em}$$f'(0.57)=1.11\quad \Rightarrow \text{ monoton steigend} $$$$f'(0.67)=0 \quad \Rightarrow \text{ waagerechte Tangente} $$$$f'(0.77)=-1.29\quad \Rightarrow \text{ monoton fallend} $$$\Rightarrow$ Hochpunkt bei $(0.67|1.8)$ \\ 
+\vspace{1em}
+\end{aufgabe}\clearpage\begin{aufgabe} ~  
+$$f(x)=x^{3} - 3 x^{2} - 4 x$$ 
+{\bf Funktion und Ableitung:} 
+\begin{align*} 
+f(x)&=x^{3} - 3 x^{2} - 4 x\\ 
+f'(x)&=3 x^{2} - 6 x - 4\\ 
+f''(x)&=6 \left(x - 1\right)\\ 
+\end{align*} 
+{\bf Verhalten im Unendlichen:} 
+\[ \lim_{x\rightarrow -\infty} f(x) =-\infty\]\[ \lim_{x\rightarrow\infty} f(x) =\infty\]{\bf Nullstellen:} 
+\begin{align*} 
+f(x)&=0 \\ 
+x^{3} - 3 x^{2} - 4 x&=0 \\ 
+x_1&=-1.0\\ 
+x_2&=0\\ 
+x_3&=4.0\\ 
+\end{align*} 
+$\Rightarrow$ Nullstelle bei $N_1(-1.0|0)$ \\ 
+$\Rightarrow$ Nullstelle bei $N_2(0|0)$ \\ 
+$\Rightarrow$ Nullstelle bei $N_3(4.0|0)$ \\ 
+{\bf Extrempunkte (Notwendige Bedingung):} 
+\begin{alignat*}{7} 
+f'(x)&=& &0& \\ 
+3 x^{2} - 6 x - 4&=& &0& \\ 
+x_1&=& &2.5& \quad &:& \quad &f(2.5)&=& \,-13.0\\ 
+x_2&=& &-0.53& \quad &:& \quad &f(-0.53)&=& \,1.1\\ 
+\end{alignat*} 
+{\bf Art der Extrempunkte ermitteln:} \\[1em] 
+{\em 1. M\"oglichkeit:} Funktionswerte in einer gen\"ugend kleinen Umgebung vergleichen \\ 
+$$f(2.4)=-13.1  >  f(2.5)=-13.1  <   f(2.6)=-13.1$$\\ 
+$\Rightarrow$ Tiefpunkt bei $(2.5|-13.0)$ \\ 
+\vspace{1em}$$f(-0.63)=1.08  <  f(-0.53)=1.13  >  f(-0.43)=1.08$$\\ 
+$\Rightarrow$ Hochpunkt bei $(-0.53|1.1)$ \\ 
+\vspace{1em}{\em 2. M\"oglichkeit:} Monotonieverhalten untersuchen \\ 
+$$f'(2.4)=-0.886\quad \Rightarrow \text{ monoton fallend} $$$$f'(2.5)=0 \quad \Rightarrow \text{ waagerechte Tangente} $$$$f'(2.6)=0.947\quad \Rightarrow \text{ monoton steigend} $$$\Rightarrow$ Tiefpunkt bei $(2.5|-13.0)$ \\ 
+\vspace{1em}$$f'(-0.63)=0.947\quad \Rightarrow \text{ monoton steigend} $$$$f'(-0.53)=0 \quad \Rightarrow \text{ waagerechte Tangente} $$$$f'(-0.43)=-0.886\quad \Rightarrow \text{ monoton fallend} $$$\Rightarrow$ Hochpunkt bei $(-0.53|1.1)$ \\ 
+\vspace{1em}
+\end{aufgabe}\clearpage\begin{aufgabe} ~  
+$$f(x)=x^{3} + x^{2} + x - 4$$ 
+{\bf Funktion und Ableitung:} 
+\begin{align*} 
+f(x)&=x^{3} + x^{2} + x - 4\\ 
+f'(x)&=3 x^{2} + 2 x + 1\\ 
+f''(x)&=2 \left(3 x + 1\right)\\ 
+\end{align*} 
+{\bf Verhalten im Unendlichen:} 
+\[ \lim_{x\rightarrow -\infty} f(x) =-\infty\]\[ \lim_{x\rightarrow\infty} f(x) =\infty\]{\bf Nullstellen:} 
+\begin{align*} 
+f(x)&=0 \\ 
+x^{3} + x^{2} + x - 4&=0 \\ 
+x&=1.2\end{align*} 
+$\Rightarrow$ Nullstelle bei $N(1.2|0)$ \\ 
+{\bf Extrempunkte (Notwendige Bedingung):} 
+\begin{alignat*}{7} 
+f'(x)&=& &0& \\ 
+3 x^{2} + 2 x + 1&=& &0& \\ 
+\end{alignat*} 
+Keine L\"osung $\Rightarrow$ Keine Extrempunkte \\ 
+{\bf Art der Extrempunkte ermitteln:} \\[1em] 
+{\em 1. M\"oglichkeit:} Funktionswerte in einer gen\"ugend kleinen Umgebung vergleichen \\ 
+{\em 2. M\"oglichkeit:} Monotonieverhalten untersuchen \\ 
+
+\end{aufgabe}\clearpage
+\end{flushleft} 
+\end{document}

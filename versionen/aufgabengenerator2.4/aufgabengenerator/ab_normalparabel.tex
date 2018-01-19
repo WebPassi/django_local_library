@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=0cm,bottom=0cm]{geometry} 
+\usepackage{amsmath}  
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\pagestyle{empty} 
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{aufgabe} ~ \\ 
+Erstelle f\"ur die Funktion $f(x)=x^{2} - 3$ eine Wertetabelle und zeichne den dazugeh\"origen Graphen im Bereich von $x=-3$ bis $x=3$ in ein Koordinatensystem.\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Gib f\"ur die folgenden Parabeln den Scheitelpunkt, die Symmetrieachse, sowie die Nullstellen an. 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3][scale=1][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{(x - 1)**2 + 2}; 
+\draw (1.5,2.2) node[right] {$\scriptscriptstyle f_1$}; 
+\draw[color=black] plot[smooth] function{x**2 + 1}; 
+\draw (0.5,1.2) node[right] {$\scriptscriptstyle f_2$}; 
+\draw[color=black] plot[smooth] function{(x - 2)**2 - 2}; 
+\draw (2.5,-1.8) node[right] {$\scriptscriptstyle f_3$}; 
+\end{scope} 
+\end{tikzpicture}\end{aufgabe} 
+\end{flushleft} 
+    \end{document}

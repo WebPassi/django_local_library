@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=0cm,bottom=0cm]{geometry} 
+\usepackage{amsmath}  
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\pagestyle{empty} 
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{aufgabe} ~ \\ 
+Erstelle f\"ur die Funktion $f(x)=x^{2} - 3$ eine Wertetabelle und zeichne den dazugeh\"origen Graphen im Bereich von $x=-3$ bis $x=3$ in ein Koordinatensystem.\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Gib f\"ur die folgenden Parabeln den Scheitelpunkt, die Symmetrieachse, sowie die Nullstellen an. 
+\begin{tikzpicture}[domain=-4:4] 
+\draw[very thin,color=gray] (-3.1,-5.1) grid (2.9,4.9); 
+\draw[->] (-3.2,0) -- (3.2,0) node[right] {$x$}; 
+\draw[->] (0,-5.2) -- (0,5.2) node[above] {$y$}; 
+\draw[color=black] plot function{x^{2} - 3} node[right] {$f(x)=x^{2} - 3$}; 
+\end{tikzpicture}\end{aufgabe} 
+\end{flushleft} 
+    \end{document}

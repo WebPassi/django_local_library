@@ -1,0 +1,186 @@
+#! /usr/bin/env python
+
+#! /usr/bin/env python
+
+## Author: Pasquale Franz
+## Date: 26.01.2015
+
+######
+## Generate a table in latex-format with given values
+import os
+
+
+from elements import *
+from functions import *
+from darstellung import *
+from aufgaben import *
+from zufall import *
+from textaufgaben.models import *
+
+
+
+def zertifikat_parabeln_potenzen():
+    strFileName="zertifikat_parabeln_und_potenzen"
+    strFileName_lsg=strFileName + "_lsg"
+
+    strFileTex=strFileName + ".tex"
+    strFileTex_lsg=strFileName_lsg + ".tex"
+    strFilePdf=strFileName + ".pdf"
+    strFilePdf_lsg=strFileName_lsg + ".pdf"
+    
+    os.system('rm ' + strFileTex)
+    os.system('rm ' + strFileTex_lsg)
+
+
+
+    datei=open(strFileName + ".tex",'a')
+    datei_lsg=open(strFileName_lsg + ".tex",'a')
+    
+
+    ### Grundniveau
+    gn="\\begin{center} \\begin{framed} Grundniveau \\end{framed} \\end{center}"
+
+
+
+
+    ### Aufgabe 1
+    ### Wertetabelle und Parabel zeichnen
+    a1=Aufgabe()
+
+    f=QuadFunc("n",1,zufallZ0(-3,3),zufallZ0(-3,3))
+    
+
+    a1.punkte=5
+    a1.aufgabe=makeExercise(aufgWertetabelleGraph(f), str(a1.punkte))
+    a1.lsg=makeExercise(aufgWertetabelleGraph(f,"a"), str(a1.punkte))
+
+
+
+    ### Aufgabe 2
+    ### Parabeleigenschaften
+    a2=Aufgabe()
+
+    flist=[]
+    for index in range(3):
+        flist.append(QuadFunc("s",1,zufallZ(-2,2),zufallZ(-2,2)))
+    for index,funktion in enumerate(flist):
+        funktion.name="f_" + latex(index+1) 
+    
+    a2.punkte=9
+    a2.aufgabe=makeExercise(aufgParabeleigenschaften(flist), str(a2.punkte))
+    a2.lsg=makeExercise(aufgParabeleigenschaften(flist,"a"), str(a2.punkte))
+    
+
+    gn=grundniveau([a1,a2])
+    gn_lsg=grundniveau([a1,a2],"a")
+
+
+
+    ### Aufgabe 3
+    ### Potenzen
+
+    a3=Aufgabe()
+
+    potenzen=[]
+    for index in range(3):
+        potenzen.append(Potenz(10,zufallZ(0,5)))
+        
+
+    a3.punkte=3
+    a3.aufgabe=makeExercise(aufgOhneZehnerpotenz(potenzen), str(a3.punkte))
+    a3.lsg=makeExercise(aufgOhneZehnerpotenz(potenzen,"a"), str(a3.punkte))
+    
+
+
+
+
+    ### Aufgabe 4
+    ### Einheiten,Potenzen
+
+    a4=Aufgabe()
+
+    einheiten=[]
+    zahlen=[]
+    for index in range(3):
+        einheiten.append("GB")
+        zahlen.append(zufallN(100))
+        
+
+    a4.punkte=3
+    a4.aufgabe=makeExercise(aufgZehnerpotenzenEinheiten(zahlen,einheiten), str(a4.punkte))
+    a4.lsg=makeExercise(aufgZehnerpotenzenEinheiten(zahlen,einheiten,"a"), str(a4.punkte))
+
+    
+
+    a5=Aufgabe()
+    
+    ta=Textaufgabe.objects.all()[0]
+    
+    a5.punkte=5
+    a5.aufgabe=makeExercise(ta.erzeugeAufgabe(["6 GB", "2 MB"]), str(a5.punkte))
+    a5.lsg=makeExercise(ta.erzeugeAufgabe(["6 GB", "2 MB"])+ta.loesung(["6 GB", "2 MB"]), str(a5.punkte))
+
+    sn=standardniveau([a3,a4,a5])
+    sn_lsg=standardniveau([a3,a4,a5],"a")
+
+
+    
+    sheet=makeZertifikat(gn+sn,"Parabeln und Potenzen",38)
+
+    sheet_lsg=makeZertifikat(gn_lsg+sn_lsg,"Parabeln und Potenzen", 38)
+
+    datei.write(sheet)
+    datei.close()
+
+    datei_lsg.write(sheet_lsg)
+    datei_lsg.close()
+    os.system('pdflatex --shell-escape ' + strFileTex)
+    os.system('pdflatex --shell-escape ' + strFileTex_lsg)
+#    os.system('evince ' + strFilePdf + '&')        
+    os.system('evince ' + strFilePdf_lsg + '&')    
+
+
+
+
+
+"""
+    flist=[]
+    for index in range(3):
+        flist.append(QuadFunc("s",zufallQ0(-4,4),zufallZ(-2,2),zufallZ(-2,2)))
+    for index,funktion in enumerate(flist):
+        funktion.name="f_" + latex(index+1) 
+
+    aufg3=makeExercise(aufgAuswahlGraph(flist))
+    aufg3_lsg=makeExercise(aufgAuswahlGraph(flist,"a"))
+
+    
+
+    flist=[]
+    for index in range(6):
+        flist.append(QuadFunc("s",zufallZ0(-3,3),zufallZ(-3,3),zufallZ(-3,3)))
+    for index,funktion in enumerate(flist):
+        funktion.name="f_" + latex(index+1) 
+
+    aufg6=makeExercise(aufgScheitelpunktform(flist))
+    aufg6_lsg=makeExercise(aufgScheitelpunktform(flist,"a"))
+
+    flist=[]
+    for index in range(6):
+        flist.append(QuadFunc("s",zufallZ0(-3,3),zufallZ(-2,2),zufallZ(-2,2)))
+    for index,funktion in enumerate(flist):
+        funktion.name="f_" + latex(index+1) 
+
+    aufg5=makeExercise(aufgNormalform(flist))
+    aufg5_lsg=makeExercise(aufgNormalform(flist,"a"))
+
+
+    flist=[]
+    for index in range(4):
+        flist.append(QuadFunc("s",zufallQ0(-4,4),zufallZ(-2,2),zufallZ(-2,2)))
+    for index,funktion in enumerate(flist):
+        funktion.name="f_" + latex(index+1) 
+"""
+
+
+
+

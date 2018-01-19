@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} 
+\usepackage{amsmath}  
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\pagestyle{empty} 
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document}
+\begin{flushleft}
+\begin{aufgabe} ~ \ 
+\begin{multicols}{2} 
+\begin{enumerate}[a)] 
+\item 
+$f(x)=1x+2$ \\ 
+\begin{tabular}{c|c|c|c|c|c|c}
+-3&-2&-1&0&1&2&3\\ \hline 
+-1&0&1&2&3&4&5\end{tabular} 
+
+\item 
+$f(x)=1x+2$ \\ 
+\begin{tabular}{c|c|c|c|c|c|c}
+-3&-2&-1&0&1&2&3\\ \hline 
+-1&0&1&2&3&4&5\end{tabular} 
+
+\item 
+$f(x)=1x+2$ \\ 
+\begin{tabular}{c|c|c|c|c|c|c}
+-3&-2&-1&0&1&2&3\\ \hline 
+-1&0&1&2&3&4&5\end{tabular} 
+
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe}\end{flushleft} 
+\end{document}

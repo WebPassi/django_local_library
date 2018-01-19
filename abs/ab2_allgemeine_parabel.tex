@@ -1,0 +1,207 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{eurosym} 
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=0.5cm]{geometry} 
+\usepackage{fancyheadings} 
+\pagestyle{fancy} 
+\headheight1.6cm 
+\lhead{} 
+\chead{} 
+\rhead{\includegraphics[scale=0.5]{logo.png}} 
+\lfoot{} 
+    \cfoot{} 
+    \rfoot{} 
+\usepackage{amsmath}  
+\usepackage{cancel} 
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\newtheoremstyle{aufg} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{aufg} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\newtheoremstyle{bsp} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\em}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{bsp} 
+\newtheorem{beispiel}{Beispiel} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{aufgabe} ~ \\ 
+Erstelle f\"ur die Funktion $f(x)=- 0.5 \left(x + 1\right)^{2} + 2.5$ eine Wertetabelle und zeichne den dazugeh\"origen Graphen im Bereich von $x=-3$ bis $x=3$ in ein Koordinatensystem. \\ 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Gib f\"ur die folgenden Parabeln Scheitelpunkt, Symmetrieachse, Nullstellen und \"Offnung an. Gib weiter an, ob die Parabeln durch Streckung oder Stauchung aus der Normalparabel entstehen. 
+\begin{minipage}{0.15\textwidth} 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3,scale=0.5][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{(x + 1)**2/2 + 2}; 
+\draw (-0.5,2.2) node[right] {$\scriptscriptstyle f_1$}; 
+\draw[color=black] plot[smooth] function{x**2/2 - 1}; 
+\draw (0.5,-0.8) node[right] {$\scriptscriptstyle f_2$}; 
+\draw[color=black] plot[smooth] function{3*x**2 - 2}; 
+\draw (0.5,-1.8) node[right] {$\scriptscriptstyle f_3$}; 
+\end{scope} 
+\end{tikzpicture}\end{minipage} 
+\begin{minipage}{0.1\textwidth} 
+ ~ \end{minipage} 
+\begin{minipage}{0.65\textwidth} 
+\renewcommand{\arraystretch}{1.3} 
+\begin{tabular}{c|c|c|c|c|c}
+ & Scheitelpunkt & Symmetrieachse & Nullstellen & \"Offnung & Form\\ \hline 
+$f_1$ &  &  &  &  & \\ \hline 
+$f_2$ &  &  &  &  & \\ \hline 
+$f_3$ &  &  &  &  & \\ 
+
+\end{tabular} 
+
+\end{minipage} 
+
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Streiche die Graphen, die nicht zur Funktionsgleichung passen. \\ 
+\begin{minipage}{0.24999999999999997\textwidth} 
+\vspace{1em} 
+$f_1(x)=\left(x - 1\right)^{2} - 1$\\[1em] 
+\end{minipage} 
+\begin{minipage}{0.1\textwidth} 
+ ~ \end{minipage} 
+\begin{minipage}{0.55\textwidth} 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3,scale=0.4][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{(x - 1)**2 - 1}; 
+\end{scope} 
+\end{tikzpicture}\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3,scale=0.4][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{(x - 2)**2/4}; 
+\end{scope} 
+\end{tikzpicture}\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3,scale=0.4][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{-x**2}; 
+\end{scope} 
+\end{tikzpicture}\end{minipage} 
+
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Unterstreiche die Funktionsgleichung, die zum Graphen passt. \\ 
+\begin{minipage}{0.19999999999999998\textwidth} 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[domain=-3:3,scale=0.6][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]\draw[color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.0,-3.0) grid (3.0,3.0); 
+\draw[->] (-3.0,0) -- (3.0,0) node[below] {\footnotesize $x$}; 
+\foreach \x in {-3, -2, -1,  1, 2}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-3.0) -- (0,3.0) node[right] {\footnotesize $y$}; 
+\foreach \y in {-3, -2, -1,  1, 2}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\begin{scope} 
+\clip (-3,-3) rectangle (3,3); 
+\draw[color=black] plot[smooth] function{-(x - 1)**2/2 - 2}; 
+\end{scope} 
+\end{tikzpicture}\end{minipage} 
+\begin{minipage}{0.1\textwidth} 
+ ~ \end{minipage} 
+\begin{minipage}{0.6\textwidth} 
+\vspace{1em} 
+$f_1(x)=- \frac{1}{2} \left(x - 1\right)^{2} - 2$\\[1em] 
+$f_2(x)=- \frac{1}{2} \left(x - 2\right)^{2} - 1$\\[1em] 
+$f_3(x)=\left(x - 1\right)^{2} + 2$\\[1em] 
+$f_4(x)=- 3 \left(x - 2\right)^{2} + 1$\\[1em] 
+\end{minipage} 
+
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Bringe die Funktionsgleichungen auf Normalform. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$f_1(x)=\left(x - 1\right)^{2} + 1$
+\item 
+$f_2(x)=- 2 \left(x - 2\right)^{2} - 1$
+\item 
+$f_3(x)=- \left(x - 1\right)^{2} - 2$
+\item 
+$f_4(x)=- 2 \left(x - 1\right)^{2} - 1$
+\item 
+$f_5(x)=x^{2}$
+\item 
+$f_6(x)=2 \left(x + 2\right)^{2} - 1$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Bringe die Funktionsgleichungen auf Scheitelpunktform. \\ 
+\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$f_1(x)=2 x^{2} - 4 x - 1$
+\item 
+$f_2(x)=x^{2} + 6 x + 12$
+\item 
+$f_3(x)=- 2 x^{2} - 8 x - 7$
+\item 
+$f_4(x)=x^{2} + 4 x + 6$
+\item 
+$f_5(x)=- x^{2} + 4 x - 4$
+\item 
+$f_6(x)=- 2 x^{2} + 4 x$
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\end{flushleft} 
+\end{document}

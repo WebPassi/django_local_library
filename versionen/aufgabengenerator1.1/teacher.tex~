@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\pagestyle{empty} 
+\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} 
+\usepackage{amsmath}  
+
+
+
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document}
+\begin{flushleft}
+\begin{aufgabe} ~  
+Funktion und Ableitung: 
+\begin{align*} 
+f(x)&=3 x^{4} e^{x^{3}}\\ 
+f'(x)&=9 x^{6} e^{x^{3}} + 12 x^{3} e^{x^{3}}\\ 
+f'(x)&=x^{3} \left(9 x^{3} + 12\right) e^{x^{3}}\\ 
+f''(x)&=9 x^{2} \left(3 x^{6} + 10 x^{3} + 4\right) e^{x^{3}}\\ 
+\end{align*} 
+Nullstellen: 
+\begin{align*} 
+f(x)&=0 \\ 
+3 x^{4} e^{x^{3}}&=0 \\ 
+x&=0\end{align*} 
+\\ 
+Extrempunkte (Notwendige Bedingung:) 
+\begin{align*} 
+f'(x)&=0 \\ 
+x^{3} \left(9 x^{3} + 12\right) e^{x^{3}}&=0 \\ 
+x_1&=0\\ 
+x_2&=-1.1\\ 
+\\ 
+Funktionswerte: \\ 
+$f(0)=0$ \quad$f(-1.1)=1.2$ \quad$$f''(0)=0$$$\Rightarrow$ Keine Entscheidung moeglich. \\ 
+$$f''(-1.1)=-12.0
+\end{aufgabe}\vspace{1em}
+\end{flushleft} 
+\end{document}

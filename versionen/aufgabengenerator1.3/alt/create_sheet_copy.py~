@@ -1,0 +1,55 @@
+#! /usr/bin/env python
+
+## Author: Pasquale Franz
+## Date: 26.01.2015
+
+######
+## Generate a table in latex-format with given values
+
+from sympy.abc import *
+from sympy import *
+from skelet import Skelet
+from elements import *
+from functions import *
+import os
+import random
+
+s=Skelet()
+c=Multicol()
+lf=open('datei.tex','a')
+#tab=open('tabelle.tex','a')
+#func=open('functions.tex','a')
+
+def zeichnen(function):
+    function.graph_zeichnen()
+
+def anz(function):
+    function.anzeigen()
+
+def tab(function):
+    function.wertetabelle([-3,-2,-1,0,1,2,3])
+
+funcs=range(15)
+for i,f in enumerate(funcs):
+    #    a = random.randint(1,14)/2.0-4
+    #    a = random.choice([-2,-1.5,-1,-0.67,-0.5,-0.33,0.33,0.5,0.67,1,1.5,2])
+    a = random.choice([-2,Rational(-3,2),-1,Rational(-2,3),Rational(-1,2),Rational(-1,3),Rational(1,3),0,Rational(1,2),Rational(2,3),1,Rational(3,2),2])
+    b = random.randint(1,7)-4
+    funcs[i]=LinFunc(a,b)
+s.head()
+for i,f in enumerate(funcs):
+    zeichnen(funcs[i])
+    anz(funcs[i])
+    tab(funcs[i])
+s.end()
+os.system('pdflatex datei.tex')
+os.system('evince datei.pdf &')
+os.system('pdflatex tabelle.tex')
+os.system('evince tabelle.pdf &')
+os.system('pdflatex functions.tex')
+os.system('evince functions.pdf &')
+
+
+
+
+

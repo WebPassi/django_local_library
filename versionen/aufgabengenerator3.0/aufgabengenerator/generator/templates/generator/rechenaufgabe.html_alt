@@ -1,0 +1,11 @@
+<form action="select.html" method="post">
+  <select name="aufgabenbereich" size="5" onchange="alert(this.form.Pizza.options[this.form.Pizza.selectedIndex].value)">
+    <option>Lineare Gleichungen</option>
+    <option>Quadratische Gleichungen</option>
+    <option>Prozentrechnung</option>
+    <option>Lineare Funktionen</option>
+    <option>Quadratische Funktionen</option>
+  </select>
+<input type="submit" value="Wählen" />
+</form>
+

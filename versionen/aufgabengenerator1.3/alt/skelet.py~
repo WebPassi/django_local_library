@@ -1,0 +1,142 @@
+#! /usr/bin/env python
+
+## Author: Pasquale Franz
+## Date: 26.01.2015
+
+######
+## Just the skelet of a latex file
+
+
+# erklaere alle buchstaben neutzbaren zu sympy symbolen:
+from sympy.abc import *
+
+
+
+### note: um einen \ mit write() zu erzeugen muss  \\ getippt werden.
+
+class Skelet:
+    def head(self):
+        lf = open('datei.tex','w')
+        lf.write('\
+\\documentclass[12pt]{article}\n\
+\\usepackage[utf8]{inputenc}\n\
+\\usepackage{paralist} \n\
+\\usepackage{amssymb}  \n\
+\\usepackage{amsthm}   \n\
+\\usepackage{multicol} \n\
+\\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} \n\
+\\usepackage{amsmath}  \n\
+\\usepackage{pgf,tikz} \n\
+\\usetikzlibrary{arrows} \n\
+\\pagestyle{empty} \n\
+\\newtheoremstyle{note} \n\
+{16pt}  % Platz zwischen Kopf und voherigem Text \n\
+{16pt}  % und nachfolgendem Text \n\
+{}     % Schriftart des Koerpers \n\
+{}     % mit \parindent Einzug \n\
+{\\bf}  % Schriftart des Kopfes \n\
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf \n\
+{0.5em} % Platz zwischen Kopf und Koerper \n\
+{}     % Kopfname \n\n\
+\\theoremstyle{note} \n\
+\\newtheorem{aufgabe}{Aufgabe} \n\n\n\n\
+\\begin{document}\n\
+\\begin{flushleft}\n')
+        lf.close()
+        lfu = open('functions.tex','w')
+        lfu.write('\
+\\documentclass[12pt]{article}\n\
+\\usepackage[utf8]{inputenc}\n\
+\\usepackage{paralist} \n\
+\\usepackage{amssymb}  \n\
+\\usepackage{amsthm}   \n\
+\\usepackage{multicol} \n\
+\\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} \n\
+\\usepackage{amsmath}  \n\
+\\usepackage{pgf,tikz} \n\
+\\usetikzlibrary{arrows} \n\
+\\pagestyle{empty} \n\
+\\newtheoremstyle{note} \n\
+{16pt}  % Platz zwischen Kopf und voherigem Text \n\
+{16pt}  % und nachfolgendem Text \n\
+{}     % Schriftart des Koerpers \n\
+{}     % mit \parindent Einzug \n\
+{\\bf}  % Schriftart des Kopfes \n\
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf \n\
+{0.5em} % Platz zwischen Kopf und Koerper \n\
+{}     % Kopfname \n\n\
+\\theoremstyle{note} \n\
+\\newtheorem{aufgabe}{Aufgabe} \n\n\n\n\
+\\begin{document}\n\
+\\begin{flushleft}\n')
+        lfu.close()
+
+        lft = open('tabelle.tex','w')
+        lft.write('\
+\\documentclass[12pt]{article}\n\
+\\usepackage[utf8]{inputenc}\n\
+\\usepackage{paralist} \n\
+\\usepackage{amssymb}  \n\
+\\usepackage{amsthm}   \n\
+\\usepackage{multicol} \n\
+\\usepackage[left=1.5cm,right=1.5cm,top=0.8cm,bottom=1cm]{geometry} \n\
+\\usepackage{amsmath}  \n\
+\\usepackage{pgf,tikz} \n\
+\\usetikzlibrary{arrows} \n\
+\\pagestyle{empty} \n\
+\\newtheoremstyle{note} \n\
+{16pt}  % Platz zwischen Kopf und voherigem Text \n\
+{16pt}  % und nachfolgendem Text \n\
+{}     % Schriftart des Koerpers \n\
+{}     % mit \parindent Einzug \n\
+{\\bf}  % Schriftart des Kopfes \n\
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf \n\
+{0.5em} % Platz zwischen Kopf und Koerper \n\
+{}     % Kopfname \n\n\
+\\theoremstyle{note} \n\
+\\newtheorem{aufgabe}{Aufgabe} \n\n\n\n\
+\\begin{document}\n\
+\\begin{flushleft}\n')
+        lft.close()
+
+    def end(self):
+        lf = open('datei.tex','a')
+        lfu = open('functions.tex','a')
+        lft = open('tabelle.tex','a')
+        lf.write('\
+\\end{flushleft}\n\
+\\end{document}')
+        lf.write('\n')
+        lf.close()
+        lfu.write('\
+\\end{flushleft}\n\
+\\end{document}')
+        lfu.write('\n')
+        lfu.close()
+        lft.write('\
+\\end{flushleft}\n\
+\\end{document}')
+        lft.write('\n')
+        lft.close()
+
+    def body(self):
+        lf = open('datei.tex','a')
+        lf.write('Nur ein Test')
+        lf.write('\n')
+        lf.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

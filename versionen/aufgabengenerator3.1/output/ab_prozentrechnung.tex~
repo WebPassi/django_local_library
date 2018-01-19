@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=0.5cm]{geometry} 
+\usepackage{fancyheadings} 
+\pagestyle{fancy} 
+\headheight1.6cm 
+\lhead{} 
+\chead{Prozentrechnung} 
+\rhead{\includegraphics[scale=0.5]{/home/pfranz/hbo/logo.png}} 
+\lfoot{} 
+\cfoot{} 
+\rfoot{} 
+\usepackage{amsmath}  
+\usepackage{cancel} 
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+Name: \hspace{12cm} Datum:Bestimme den Prozentwert.\\ 
+ {\em{L\"osung: $\frac{5}{100}\cdot 100=5.0$\begin{aufgabe} ~ \\ 
+Bestimme den Prozentwert.\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$42\%$ von $4106$ g
+\item 
+$8\%$ von $3898$ kg
+\item 
+$54\%$ von $426$ m
+\item 
+$65\%$ von $1782$ km
+\item 
+$72\%$ von $3795$ ml
+\item 
+$47\%$ von $1294$ t
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Bestimme den Prozentsatz.\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$1976$ g von $3309$ g
+\item 
+$2397$ kg von $3734$ kg
+\item 
+$2064$ m von $3973$ m
+\item 
+$2602$ km von $3513$ km
+\item 
+$2529$ ml von $4522$ ml
+\item 
+$1444$ t von $4986$ t
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+Bestimme den Grundwert.\begin{multicols}{3} 
+\begin{enumerate}[a)] 
+\item 
+$1976$ g sind $83\%$.
+\item 
+$2397$ kg sind $9\%$.
+\item 
+$2064$ m sind $8\%$.
+\item 
+$2602$ km sind $1\%$.
+\item 
+$2529$ ml sind $93\%$.
+\item 
+$1444$ t sind $35\%$.
+\end{enumerate} 
+\end{multicols} 
+\end{aufgabe} 
+25800,\hspace{-1pt} | 608,\hspace{-1pt}180000000000 | 230,\hspace{-1pt}040000000000 | 59,\hspace{-1pt}72 | 26633,\hspace{-1pt} | 55,\hspace{-1pt}927 | 1158,\hspace{-1pt}30000000000 | 311,\hspace{-1pt}840000000000 | 28,\hspace{-1pt}961 | 2,\hspace{-1pt}6020e+5 | 74,\hspace{-1pt}068 | 2380,\hspace{-1pt}7 | 1724,\hspace{-1pt}52000000000 | 4125,\hspace{-1pt}7 | 64,\hspace{-1pt}194 | 51,\hspace{-1pt}951 | 2719,\hspace{-1pt}4 | 2732,\hspace{-1pt}40000000000 | \end{flushleft} 
+    \end{document}

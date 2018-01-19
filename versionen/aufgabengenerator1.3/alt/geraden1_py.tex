@@ -1,0 +1,13 @@
+\\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} \n\ 
+\\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm] \n\ 
+\\draw [color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-3.33,-3.57) grid (3.29,3.53); \n\ 
+\\draw[->,color=black] (-3.33,0) -- (3.29,0); \n\ 
+\\foreach \\x in {-3,-2,-1,1,2,3} \n\ 
+\\draw[shift={(\\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\\footnotesize $\\x$}; \n\ 
+\\draw[color=black] (3,0.07) node [anchor=south west] { x}; \n\ 
+\\draw[->,color=black] (0,-3.57) -- (0,3.53); \n\ 
+\\foreach \\y in {-3,-2,-1,1,2,3} \n\ 
+\\draw[shift={(0,\\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\\footnotesize $\\y$}; \n\ 
+\\draw[color=black] (0.09,3.17) node [anchor=west] { y}; \n\ 
+\\draw[color=black] (0pt,-10pt) node[right] {\\footnotesize $0$}; \n\ 
+\\clip(-3.33,-3.57) rectangle (3.29,3.53); \n\ 

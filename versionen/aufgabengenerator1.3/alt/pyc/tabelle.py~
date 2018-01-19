@@ -1,0 +1,28 @@
+#! /usr/bin/env python
+
+## Author: Pasquale Franz
+## Date: 26.01.2015
+
+######
+## Generate a table in latex-format with given values
+
+from sympy.abc import *
+from skelet import Skelet
+
+class Table:
+    def centered(self,x,f):
+        lf = open('datei.tex','a')
+        lf.write('\
+\\begin{tabular}{c|c|c|c} \n')
+        appear=1
+        for i in x:
+            lf.write(i)
+            if appear < len(x):
+                lf.write('&')
+        lf.write('\\\\ \\hline \n')
+        lf.write('\\end{tabular} \n')
+
+
+
+
+

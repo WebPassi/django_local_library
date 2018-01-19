@@ -1,0 +1,109 @@
+% basic
+\documentclass[fleqn,leqno,11pt]{scrartcl} 
+\usepackage{multicol}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usetikzlibrary{arrows}
+\usepackage {graphicx}
+\usepackage{paralist} % enumerate
+\usepackage{amsthm}   % \newtheorem-Umgebung
+\usepackage{amsmath}  % \align-Umgebung
+\usepackage{amssymb}  % z.B. fuer reelles Zahlensymbol
+\usepackage{framed}
+% Dimension
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1cm]{geometry}
+
+
+% Neue Kommandos
+\newcommand{\lack}{\hspace{3cm}}
+\newcommand{\Vekz}[2]{\left(\begin{array}{r} #1 \\ #2 \end{array}\right)}
+\newcommand{\Vekd}[3]{\left(\begin{array}{r} #1 \\ #2 \\ #3 \end{array}\right)}
+
+% Umgebung outfits
+\newtheoremstyle{aufgabenstyle}
+{16pt}  % Platz zwischen Kopf und voherigem Text
+{16pt}  % und nachfolgendem Text
+{}     % Schriftart des Koerpers
+{}     % mit \parindent Einzug
+{\bf}  % Schriftart des Kopfes
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf
+{0.5em} % Platz zwischen Kopf und Koerper
+{}     % Kopfname
+
+% Umgebungsnamen
+\theoremstyle{aufgabenstyle}
+\newtheorem{aufgabe}{Aufgabe}
+
+% Pagestyle Header and co
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.25]{logo14_15.png}}
+\chead{\hspace{0cm} {Klausur ma - 2 (Frz)}}
+\rhead{05.03.15}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+
+
+
+\begin{document}
+
+\begin{flushleft}
+Name: \\[2em]
+\begin{center}
+{\Large Thema: Integralrechnung}
+\end{center}
+\vspace{2em}
+
+
+\begin{aufgabe}[3+4={\bf 7 Punkte}] ~ \\
+Berechnen Sie die bestimmten Integrale.
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\int\limits_{1}^{3} x^{3}\, dx$
+\item $\int\limits_{-2}^{2} x^{7}-2x^{3}\, dx$
+\end{enumerate}
+\end{multicols}
+\end{aufgabe}
+
+
+\begin{aufgabe}[2+4+4+4+1={\bf 15 Punkte}] ~ \\
+Gegeben ist die Funktion
+\[ f(x)=\mathrm{e}^{\frac{1}{4}x}. \]
+\begin{enumerate}[a)]
+\item Bestimmen Sie die Funktionswerte $f(-4)$, $f(0)$, $f(4)$ und $f(8)$.
+\item Zeichnen Sie den Graphen von $f$ im Intervall $[-4;8]$. 
+\item Bestimmen Sie n\"aherungsweise den Fl\"acheninhalt zwischen dem Graphen von $f$ und der $x$-Achse \"uber dem Intervall $[0;8]$. Nutzen Sie dazu die Untersumme $U_2$ und veranschaulichen Sie Ihre Vorgehenseise an Ihrer Zeichnung.
+\item Eine Stammfunktion von $f$ lautet:
+\[ F(x)=4\mathrm{e}^{\frac{1}{4}x}. \]
+Bestimmen Sie damit den exakten Fl\"acheninhalt zwischen Graph und $x$-Achse \"uber dem Intervall $[0;8]$ und geben Sie an, welchen prozentualen Fehler Ihre N\"aherungsl\"osung hat.
+\item Beschreiben Sie eine M\"oglichkeit, wie Sie den Fehler verringern k\"onnen.
+\end{enumerate}
+\end{aufgabe}
+
+
+\begin{aufgabe}[{\bf 8} oder {\bf 12 Punkte}] ~ \\
+Der Graph von $f$ und die $x$-Achse schlie\ss{}en eine Fl\"ache ein. Bestimmen Sie deren Inhalt. Verwenden Sie f\"ur $f$ \\ 
+{\bf entweder}
+\[ f(x)=x^2+4x-5 \]
+{\bf oder}
+\[ f(x)=-2x^3+6x^2+20x \].
+\end{aufgabe}
+
+\begin{aufgabe}[{\bf 15 Punkte}] ~ \\
+\begin{minipage}{0.45\textwidth}
+Zwei Seen sind durch einen 8 Meter breiten Kanal verbunden. An der tiefsten Stelle hat der Kanal eine Tiefe von 3 Meter. Der Querschnitt des Kanals ist auf dem Bild rechts (nicht ma\ss{}stabsgetreu) abgebildet. Bestimmen Sie, wieviel Wasser der Kanal aufnehmen kann, wenn er eine L\"ange von 500 Meter besitzt. 
+\end{minipage}
+\begin{minipage}{0.1\textwidth}
+~
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+\includegraphics[scale=0.65]{kanal.png}
+\end{minipage}
+\end{aufgabe}
+\end{flushleft}
+\end{document}
+
+

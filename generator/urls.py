@@ -2,6 +2,9 @@ from django.conf.urls import url
 
 from generator import views
 
+
+app_name="generator"
+
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     #url(r'^(?P<n>\d+)/$', views.detail, name='detail'),

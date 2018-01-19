@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{paralist} 
+\usepackage{amssymb}  
+\usepackage{amsthm}   
+\usepackage{multicol} 
+\usepackage[left=1.5cm,right=1.5cm,top=0cm,bottom=0cm]{geometry} 
+\usepackage{amsmath}  
+\usepackage{pgf,tikz} 
+\usetikzlibrary{arrows} 
+\pagestyle{empty} 
+\newtheoremstyle{note} 
+{16pt}  % Platz zwischen Kopf und voherigem Text 
+{16pt}  % und nachfolgendem Text 
+{}     % Schriftart des Koerpers 
+{}     % mit \parindent Einzug 
+{\bf}  % Schriftart des Kopfes 
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf 
+{0.5em} % Platz zwischen Kopf und Koerper 
+{}     % Kopfname 
+
+\theoremstyle{note} 
+\newtheorem{aufgabe}{Aufgabe} 
+
+
+
+\begin{document} 
+    \begin{flushleft}
+\begin{aufgabe} ~ \\ 
+\begin{minipage}{0.2\textwidth} 
+\begin{enumerate}[a)] 
+\item 
+$f_1(x)=x$
+\item 
+$f_2(x)=x - 3$
+\item 
+$f_3(x)=x - 6$
+\item 
+$f_4(x)=x + 3$
+\end{enumerate} 
+\end{minipage} 
+\begin{minipage}{0.1\textwidth} 
+ ~ \end{minipage} 
+\begin{minipage}{0.6\textwidth} 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[scale=0.3][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm] 
+\draw [color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-6.33,-6.57) grid (6.29,6.53); 
+\draw[->,color=black] (-6.33,0) -- (6.29,0); 
+\foreach \x in {-6,-4,-2,2,4,6} 
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; 
+\draw[color=black] (6,0.07) node [anchor=south west] { x}; 
+\draw[->,color=black] (0,-6.57) -- (0,6.53); 
+\foreach \y in {-6,-4,-2,2,4,6} 
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0.09,6.17) node [anchor=west] { y}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\clip(-6.33,-6.57) rectangle (6.29,6.53);\draw [domain=-6.33:6.29] plot(\x,{(1*\x+0}); 
+\draw [domain=-6.33:6.29] plot(\x,{(1*\x+-3}); 
+\draw [domain=-6.33:6.29] plot(\x,{(1*\x+-6}); 
+\draw [domain=-6.33:6.29] plot(\x,{(1*\x+3}); 
+\end{tikzpicture} 
+\hspace{1cm}\end{minipage} 
+
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{minipage}{0.2\textwidth} 
+\begin{enumerate}[a)] 
+\item 
+$f_1(x)=x$
+\item 
+$f_2(x)=-\frac{1}{2}x$
+\item 
+$f_3(x)=-\frac{4}{3}x$
+\item 
+$f_4(x)=2 x$
+\end{enumerate} 
+\end{minipage} 
+\begin{minipage}{0.1\textwidth} 
+ ~ \end{minipage} 
+\begin{minipage}{0.6\textwidth} 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[scale=0.3][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm] 
+\draw [color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-6.33,-6.57) grid (6.29,6.53); 
+\draw[->,color=black] (-6.33,0) -- (6.29,0); 
+\foreach \x in {-6,-4,-2,2,4,6} 
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; 
+\draw[color=black] (6,0.07) node [anchor=south west] { x}; 
+\draw[->,color=black] (0,-6.57) -- (0,6.53); 
+\foreach \y in {-6,-4,-2,2,4,6} 
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0.09,6.17) node [anchor=west] { y}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\clip(-6.33,-6.57) rectangle (6.29,6.53);\draw [domain=-6.33:6.29] plot(\x,{(1*\x+0}); 
+\draw [domain=-6.33:6.29] plot(\x,{(-1/2*\x+0}); 
+\draw [domain=-6.33:6.29] plot(\x,{(-4/3*\x+0}); 
+\draw [domain=-6.33:6.29] plot(\x,{(2*\x+0}); 
+\end{tikzpicture} 
+\hspace{1cm}\end{minipage} 
+
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\begin{minipage}{0.2\textwidth} 
+\begin{enumerate}[a)] 
+\item 
+$f_1(x)=x$
+\item 
+$f_2(x)=- x - 3$
+\item 
+$f_3(x)=-\frac{1}{2}x+ 3$
+\item 
+$f_4(x)=-\frac{3}{2}x+ 3$
+\end{enumerate} 
+\end{minipage} 
+\begin{minipage}{0.1\textwidth} 
+ ~ \end{minipage} 
+\begin{minipage}{0.6\textwidth} 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[scale=0.3][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm] 
+\draw [color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-6.33,-6.57) grid (6.29,6.53); 
+\draw[->,color=black] (-6.33,0) -- (6.29,0); 
+\foreach \x in {-6,-4,-2,2,4,6} 
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; 
+\draw[color=black] (6,0.07) node [anchor=south west] { x}; 
+\draw[->,color=black] (0,-6.57) -- (0,6.53); 
+\foreach \y in {-6,-4,-2,2,4,6} 
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0.09,6.17) node [anchor=west] { y}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\clip(-6.33,-6.57) rectangle (6.29,6.53);\draw [domain=-6.33:6.29] plot(\x,{(1*\x+0}); 
+\draw [domain=-6.33:6.29] plot(\x,{(-1*\x+-3}); 
+\draw [domain=-6.33:6.29] plot(\x,{(-1/2*\x+3}); 
+\draw [domain=-6.33:6.29] plot(\x,{(-3/2*\x+3}); 
+\end{tikzpicture} 
+\hspace{1cm}\end{minipage} 
+
+\end{aufgabe} 
+\begin{aufgabe} ~ \\ 
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75} 
+\begin{tikzpicture}[scale=0.8][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm] 
+\draw [color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=1.0cm,ystep=1.0cm] (-6.33,-6.57) grid (6.29,6.53); 
+\draw[->,color=black] (-6.33,0) -- (6.29,0); 
+\foreach \x in {-6,-4,-2,2,4,6} 
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; 
+\draw[color=black] (6,0.07) node [anchor=south west] { x}; 
+\draw[->,color=black] (0,-6.57) -- (0,6.53); 
+\foreach \y in {-6,-4,-2,2,4,6} 
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$}; 
+\draw[color=black] (0.09,6.17) node [anchor=west] { y}; 
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$}; 
+\clip(-6.33,-6.57) rectangle (6.29,6.53);\draw [domain=-6.33:6.29] plot(\x,{(1*\x+0}); 
+\draw [domain=-6.33:6.29] plot(\x,{(-1*\x+2}); 
+\draw [domain=-6.33:6.29] plot(\x,{(1*\x+-2}); 
+\draw [domain=-6.33:6.29] plot(\x,{(-1/4*\x+6}); 
+\end{tikzpicture} 
+\hspace{1cm}\end{aufgabe} 
+\end{flushleft} 
+    \end{document}

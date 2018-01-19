@@ -99,6 +99,9 @@ urlpatterns = [
     url(r'^winkel_vektoren/$', views.winkel_vektoren, name='winkel_vektoren'),
     url(r'^ebene_normalform/$', views.ebene_normalform, name='ebene_normalform'),
 
+
+    url(r'^binomial/$', views.binomial, name='binomial'),
+
     
 
 ]
