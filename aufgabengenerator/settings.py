@@ -44,7 +44,7 @@ TEMPLATES = [
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['floating-meadow-24312.herokuapp.com','127.0.0.1']
 
 
 # Application definition
