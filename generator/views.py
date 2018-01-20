@@ -61,6 +61,16 @@ act_dir='user/frz/tmp'
 
 
 def index(request):
+    os.mkdir('blabla')
+    os.chdir('user')
+    os.system('touch testtest.txt')
+    os.mkdir('testordner')
+    #os.chdir('../')
+    return HttpResponse(os.getcwd())
+
+
+
+
     context={'bla': ""}
     return render(request,'generator/index.html',context)
 
@@ -368,7 +378,7 @@ def create_skelet(request):
     arbeitsblatt=open('tmp' + '.tex','w')
 
     #latexstr=open('/home/pfranz/aufgabengenerator/vorlagen/geometrie3d.tex').read()
-    latexstr=open('/vorlagen/geometrie3d.tex').read()
+    latexstr=open('../vorlagen/geometrie3d.tex').read()
 
 
     latexstr+="\\begin{document} \n" 
