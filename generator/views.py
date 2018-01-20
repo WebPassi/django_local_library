@@ -190,7 +190,7 @@ def neues_projekt(request,projektname="tmp"):
 
     user_dir=user
 
-    os.chdir(user_dir)
+    os.chdir(../user_dir)
 
     shutil.rmtree('tmp/')
 
