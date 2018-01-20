@@ -64,6 +64,7 @@ def index(request):
     os.mkdir('blabla')
     os.chdir('user')
     os.system('touch testtest.txt')
+    os.mkdir('testordner')
     #os.chdir('../')
     return HttpResponse(os.listdir())
 
