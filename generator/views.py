@@ -313,7 +313,7 @@ def manuell_ab(request,projektname=""):
     except OSError:
         pass
 
-    os.chdir(projekt_dir)
+    #os.chdir(projekt_dir)
 
     try:
         os.system('touch ' +  'tmp' + '.kpt')
