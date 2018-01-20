@@ -368,7 +368,7 @@ def create_skelet(request):
     arbeitsblatt=open('tmp' + '.tex','w')
 
     #latexstr=open('/home/pfranz/aufgabengenerator/vorlagen/geometrie3d.tex').read()
-    latexstr=open('vorlagen/geometrie3d.tex').read()
+    latexstr=open('/vorlagen/geometrie3d.tex').read()
 
 
     latexstr+="\\begin{document} \n" 
