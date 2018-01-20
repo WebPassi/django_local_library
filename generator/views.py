@@ -389,7 +389,7 @@ def create_skelet(request):
     loesung=open('tmp_lsg' + '.tex','w')
 
     #latexstr=open('/home/pfranz/aufgabengenerator/vorlagen/geometrie3d.tex').read()
-    latexstr=open('vorlagen/geometrie3d.tex').read()
+    #latexstr=open('vorlagen/geometrie3d.tex').read()
 
     latexstr+="\\begin{document} \n" 
 
