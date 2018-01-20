@@ -61,15 +61,8 @@ act_dir='user/frz/tmp'
 
 
 def index(request):
-    os.mkdir('blabla')
-    os.chdir('user')
-    os.system('touch testtest.txt')
-    os.mkdir('testordner')
-    #os.chdir('../')
-    return HttpResponse(os.listdir())
-
     context={'bla': ""}
-    #return render(request,'generator/index.html',context)
+    return render(request,'generator/index.html',context)
 
 def auto_ab(request):
     context={'bla': ""}
@@ -195,9 +188,9 @@ def neues_projekt(request,projektname="tmp"):
         
     #user_dir=generator_dir + '/user/' + user
 
-    user_dir=user
+    #user_dir=user
 
-    os.chdir(user_dir)
+    os.chdir('user/frz')
 
     shutil.rmtree('tmp/')
 
