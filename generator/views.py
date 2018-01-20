@@ -61,8 +61,9 @@ act_dir='user/frz/tmp'
 
 
 def index(request):
+    return HttpResponse(os.getcwd())
     context={'bla': ""}
-    return render(request,'generator/index.html',context)
+    #return render(request,'generator/index.html',context)
 
 def auto_ab(request):
     context={'bla': ""}
