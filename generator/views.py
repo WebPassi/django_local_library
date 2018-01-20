@@ -63,7 +63,7 @@ act_dir='user/frz/tmp'
 def index(request):
     os.mkdir('blabla')
     os.chdir('user')
-    #os.system('touch testtest.txt')
+    os.system('touch testtest.txt')
     #os.chdir('../')
     return HttpResponse(os.listdir())
 
