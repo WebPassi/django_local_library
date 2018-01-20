@@ -190,9 +190,9 @@ def neues_projekt(request,projektname="tmp"):
 
     #user_dir=user
 
-    os.chdir('user/frz')
+    #os.chdir('user/frz')
 
-    shutil.rmtree('tmp/')
+    #shutil.rmtree('tmp/')
 
     return manuell_ab(request)
 
