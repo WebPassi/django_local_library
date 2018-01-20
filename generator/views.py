@@ -51,10 +51,11 @@ from stochastik import *
 
 #from operator import itemgetter, attrgetter
 
-generator_dir="/home/pfranz/aufgabengenerator"
+#generator_dir="/home/pfranz/aufgabengenerator"
 
 user='frz'
-act_dir='/home/pfranz/aufgabengenerator/user/frz/tmp'
+#act_dir='/home/pfranz/aufgabengenerator/user/frz/tmp'
+act_dir='user/frz/tmp'
 
 
 
@@ -185,7 +186,9 @@ def neues_projekt(request,projektname="tmp"):
     except:
         user="frz"
         
-    user_dir=generator_dir + '/user/' + user
+    #user_dir=generator_dir + '/user/' + user
+
+    user_dir=user
 
     os.chdir(user_dir)
 
@@ -202,7 +205,8 @@ def projekt_laden(request):
         user="frz"
         
 
-    user_dir=generator_dir + '/user/' + user
+    #user_dir=generator_dir + '/user/' + user
+    user_dir=user
     os.chdir(user_dir)
     projekte=glob('*')
     context={
@@ -219,7 +223,8 @@ def projekt_loeschen(request):
         user="frz"
         
 
-    user_dir=generator_dir + '/user/' + user
+    #user_dir=generator_dir + '/user/' + user
+    user_dir=user
     os.chdir(user_dir)
     projekte=glob('*')
     context={
@@ -242,7 +247,8 @@ def projekt_loeschen_submit(request,projektname):
     except:
         user="frz"
         
-    user_dir=generator_dir + '/user/' + user
+    #user_dir=generator_dir + '/user/' + user
+    user_dir=user
 
     os.chdir(user_dir)
 
@@ -259,7 +265,8 @@ def projekt_speichern(request,projekt=""):
     except:
         user="frz"
         
-    user_dir=generator_dir + '/user/' + user
+    #user_dir=generator_dir + '/user/' + user
+    user_dir=user
 
     #return HttpResponse(os.getcwd())
 
@@ -294,7 +301,8 @@ def manuell_ab(request,projektname=""):
 
 
     ### User Verzeichnis
-    projekt_dir=generator_dir + '/user/' + user + '/' + projektname
+    #projekt_dir=generator_dir + '/user/' + user + '/' + projektname
+    projekt_dir=user + '/' + projektname
 
 
     try:
@@ -356,7 +364,8 @@ def create_skelet(request):
 
     arbeitsblatt=open('tmp' + '.tex','w')
 
-    latexstr=open('/home/pfranz/aufgabengenerator/vorlagen/geometrie3d.tex').read()
+    #latexstr=open('/home/pfranz/aufgabengenerator/vorlagen/geometrie3d.tex').read()
+    latexstr=open('vorlagen/geometrie3d.tex').read()
 
 
     latexstr+="\\begin{document} \n" 
@@ -374,7 +383,9 @@ def create_skelet(request):
     ##### Loesungsblatt
     loesung=open('tmp_lsg' + '.tex','w')
 
-    latexstr=open('/home/pfranz/aufgabengenerator/vorlagen/geometrie3d.tex').read()
+    #latexstr=open('/home/pfranz/aufgabengenerator/vorlagen/geometrie3d.tex').read()
+    latexstr=open('vorlagen/geometrie3d.tex').read()
+
     latexstr+="\\begin{document} \n" 
 
     for topic in konzept:
