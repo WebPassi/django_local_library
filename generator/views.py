@@ -61,6 +61,8 @@ act_dir='user/frz/tmp'
 
 
 def index(request):
+    latexstr=open('/app/vorlagen/geometrie3d.tex').read()
+
     context={'bla': ""}
     return render(request,'generator/index.html',context)
 
