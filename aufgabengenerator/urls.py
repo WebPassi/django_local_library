@@ -15,7 +15,7 @@ urlpatterns = [
 
     path(r'generator/', include('generator.urls')),
 
-    path(r'/', include('generator.urls')),
+    path(r'', include('generator.urls')),
 
 
 ]
