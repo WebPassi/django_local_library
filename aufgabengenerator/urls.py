@@ -11,9 +11,11 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
     #url(r'^generator/', include('generator.urls', namespace="generator")),
 
-    path(r'^admin/', admin.site.urls),
+    path(r'admin/', admin.site.urls),
 
-    path(r'^generator/', include('generator.urls')),
+    path(r'generator/', include('generator.urls')),
+
+    path(r'/', include('generator.urls')),
 
 
 ]
