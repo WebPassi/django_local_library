@@ -61,7 +61,9 @@ act_dir='user/frz/tmp'
 
 
 def index(request):
+    os.mkdir('blabla')
     return HttpResponse(os.getcwd())
+
     context={'bla': ""}
     #return render(request,'generator/index.html',context)
 
