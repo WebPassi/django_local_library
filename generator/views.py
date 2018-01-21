@@ -427,7 +427,7 @@ def output_direkt(request,name):
     name='test.tex'
 
     
-    bla=open(name).readlines()
+    #bla=open(name).readlines()
 
     os.system('pdflatex --shell-escape ' + name)
 
