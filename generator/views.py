@@ -427,7 +427,7 @@ def output_direkt(request,name):
     #name=home + '/user/frz/tmp/' + name + '.pdf'
     #name=home + '/user/frz/tmp/' + name + '.tex'
 
-    name='test.tex'
+    name='tes.tex'
 
     
     bla=open(name).readlines()
