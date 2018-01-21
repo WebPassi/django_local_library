@@ -1,0 +1,51 @@
+\documentclass[fleqn,leqno,12pt]{scrartcl} % Formel links ausgerichtet und nummeriert
+%\documentclass[a4paper,12pt]{article}
+%\usepackage{a4wide}
+\usepackage{pdflscape}
+\usepackage{comment}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows}
+\usepackage {graphicx}
+\usepackage{paralist} % enumerate
+\usepackage{multicol}
+
+\usepackage{fancyheadings}
+%\pagestyle{empty}
+\usepackage{amsthm}   % \newtheorem-Umgebung
+\usepackage{amsmath}  % \align-Umgebung
+\usepackage{amssymb}  % z.B. fuer reelles Zahlensymbol
+\usepackage{framed}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=0.5cm]{geometry} 
+% environment styles
+\newtheoremstyle{note}
+{16pt}  % Platz zwischen Kopf und voherigem Text
+{16pt}  % und nachfolgendem Text
+{}     % Schriftart des Koerpers
+{}     % mit \parindent Einzug
+{\bf}  % Schriftart des Kopfes
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf
+{0.5em} % Platz zwischen Kopf und Koerper
+{}     % Kopfname
+
+\newtheoremstyle{note2}
+{40pt}  % Platz zwischen Kopf und voherigem Text
+{16pt}  % und nachfolgendem Text
+{}     % Schriftart des Koerpers
+{}     % mit \parindent Einzug
+{\bf}  % Schriftart des Kopfes
+{:}     % Nach Bedarf z.B. Doppelpunkt nach dem Kopf
+{0.5em} % Platz zwischen Kopf und Koerper
+{}     % Kopfname
+
+\theoremstyle{note2}
+\newtheorem{aufgabe}{Aufgabe}
+\newcommand{\Vekz}[2]{\left(\begin{array}{r} #1 \\ #2 \end{array}\right)}
+\newcommand{\Vekd}[3]{\left(\begin{array}{r} #1 \\ #2 \\ #3 \end{array}\right)}
+
+
+\begin{document} 
+Hallo
+\end{document} 
