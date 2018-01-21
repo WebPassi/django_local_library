@@ -414,6 +414,7 @@ def output(request):
 
 
 def output_direkt(request,name):
+    return HttpResponse(os.getcwd())
     if not '.' in name:
         name=name + '.pdf'
 
