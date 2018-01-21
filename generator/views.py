@@ -63,6 +63,9 @@ home=os.getcwd()
 def index(request):
     latexstr=open('/app/vorlagen/geometrie3d.tex').read()
 
+    f=open('test.tex','w')
+    f.write('Hallo')
+    f.close()
     
     context={'bla': ""}
     return render(request,'generator/index.html',context)
