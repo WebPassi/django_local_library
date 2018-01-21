@@ -433,7 +433,7 @@ def output_direkt(request,name):
 
 
     
-    return HttpResponse(bla)
+    #return HttpResponse(bla)
     
     with open('test.pdf','rb') as pdf:
         response = HttpResponse(pdf.read(),content_type='application/pdf')
