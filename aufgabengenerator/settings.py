@@ -71,13 +71,6 @@ MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware'
 )
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_HTTPONLY = True
-X_FRAME_OPTIONS = "DENY"
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'aufgabengenerator.urls'
 
