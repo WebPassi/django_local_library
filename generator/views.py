@@ -446,7 +446,7 @@ def aufgabe_loeschen(request):
 
 def uebersicht_aufgaben(request,nummer=""):
     context={'bla': nummer}
-    request.session['nummer']=nummer
+    #request.session['nummer']=nummer
     return render(request,'generator/uebersicht_aufgaben.html',context)
 
 def aufgabenwahl(request):
