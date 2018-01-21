@@ -414,10 +414,10 @@ def output(request):
 
 
 def output_direkt(request,name):
-    return HttpResponse(os.getcwd())
-    if not '.' in name:
-        name=name + '.pdf'
+    #return HttpResponse(os.getcwd())
 
+    name='user/frz/tmp' + name + '.pdf'
+        
     with open(name,'rb') as pdf:
         response = HttpResponse(pdf.read(),content_type='application/pdf')
         response['Content-Disposition'] = 'inline'
