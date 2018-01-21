@@ -63,9 +63,6 @@ home=os.getcwd()
 def index(request):
     latexstr=open('/app/vorlagen/geometrie3d.tex').read()
 
-    f=open('test.tex','w')
-    f.write('Hallo')
-    f.close()
     
     context={'bla': ""}
     return render(request,'generator/index.html',context)
@@ -427,7 +424,7 @@ def output_direkt(request,name):
     #name=home + '/user/frz/tmp/' + name + '.pdf'
     #name=home + '/user/frz/tmp/' + name + '.tex'
 
-    name='tes.tex'
+    name='test.tex'
 
     
     bla=open(name).readlines()
