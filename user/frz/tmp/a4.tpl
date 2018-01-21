@@ -1,1 +1,0 @@
-"aufgabentext="Bestimmen Sie die Wahrscheinlichkeiten der Bernoulli-Experimente mit den folgenden Kenngrößen und Trefferanzahl $k$.,"anzahl="6,"verbal=")
