@@ -427,12 +427,13 @@ def output_direkt(request,name):
     name='test.tex'
 
     
-    #bla=open(name).readlines()
+    bla=open(name).readlines()
 
     os.system('pdflatex --shell-escape ' + name)
 
+
     
-    #return HttpResponse(bla)
+    return HttpResponse(bla)
     
     with open('test.pdf','rb') as pdf:
         response = HttpResponse(pdf.read(),content_type='application/pdf')
