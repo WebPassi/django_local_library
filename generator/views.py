@@ -429,7 +429,7 @@ def output_direkt(request,name):
     
     #bla=open(name).readlines()
 
-    os.system('dflatex --shell-escape ' + name)
+    os.system('pdflatex --shell-escape ' + name)
 
 
     
