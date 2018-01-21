@@ -1316,7 +1316,8 @@ def binomial(request):
     anzahl=int(request.POST['anzahl'])
     verbal=""
     
-    nummer=request.session['nummer']
+    #nummer=request.session['nummer']
+    nummer="1"
     ##### Nummer vergeben / Position
     if nummer == "":
         konzept=open('tmp' + '.kpt','r').readlines()
