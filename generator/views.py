@@ -58,7 +58,7 @@ user='frz'
 act_dir='user/frz/tmp'
 
 
-
+home=os.getcwd()
 
 def index(request):
     latexstr=open('/app/vorlagen/geometrie3d.tex').read()
@@ -419,8 +419,9 @@ def output(request):
 def output_direkt(request,name):
     #return HttpResponse(os.getcwd())
 
-    name='user/frz/tmp/' + name + '.pdf'
-        
+
+    name=home + '/user/frz/tmp/' + name + '.pdf'
+    
     with open(name,'rb') as pdf:
         response = HttpResponse(pdf.read(),content_type='application/pdf')
         response['Content-Disposition'] = 'inline'
