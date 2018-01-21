@@ -420,7 +420,12 @@ def output_direkt(request,name):
     #return HttpResponse(os.getcwd())
 
 
-    name=home + '/user/frz/tmp/' + name + '.pdf'
+    #name=home + '/user/frz/tmp/' + name + '.pdf'
+    name=home + '/user/frz/tmp/' + name + '.tex'
+
+    bla=open(name).readlines()
+
+    return HttpResponse(bla)
     
     with open(name,'rb') as pdf:
         response = HttpResponse(pdf.read(),content_type='application/pdf')
