@@ -435,7 +435,7 @@ def output_direkt(request,name):
     
     #return HttpResponse(bla)
     
-    with open('test.pdf','rb') as pdf:
+    with open(home + '/test.pdf','rb') as pdf:
         response = HttpResponse(pdf.read(),content_type='application/pdf')
         response['Content-Disposition'] = 'inline'
         return response
