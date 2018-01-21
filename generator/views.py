@@ -1336,6 +1336,8 @@ def binomial(request):
 
     aufgabenname="a" + nummer
 
+    os.chdir(home + '/user/frz/')
+    
     ##### Konzept anpassen
     konzept=open('tmp' + '.kpt','a')
     konzept.write(aufgabenname + "\n")
